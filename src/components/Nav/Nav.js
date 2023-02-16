@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 
 import MenuItem from "@mui/material/MenuItem";
 
-import song from "../../audio/come-out.wav";
+// import song from "../../audio/come-out.wav";
 import { Link } from "react-router-dom";
 
 //icons
@@ -33,9 +33,9 @@ const navlinks = [
 
 const Nav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audio = new Audio(song);
-  const audioRef = useRef(audio);
+  // const [isPlaying, setIsPlaying] = useState(false);
+  // const audio = new Audio(song);
+  // const audioRef = useRef(audio);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -47,15 +47,15 @@ const Nav = () => {
 
   const classes = useStyles();
 
-  const playPause = (e) => {
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(!isPlaying);
-    } else {
-      audioRef.current.play();
-      setIsPlaying(!isPlaying);
-    }
-  };
+  // const playPause = (e) => {
+  //   if (isPlaying) {
+  //     audioRef.current.pause();
+  //     setIsPlaying(!isPlaying);
+  //   } else {
+  //     audioRef.current.play();
+  //     setIsPlaying(!isPlaying);
+  //   }
+  // };
 
   return (
     <AppBar className={classes.appBar} color="secondary" position="sticky">
@@ -152,7 +152,7 @@ const Nav = () => {
               </Link>
             ))}
           </Box>
-          <IconButton
+          {/* <IconButton
             color="warning"
             size="medium"
             variant="contained"
@@ -164,7 +164,7 @@ const Nav = () => {
             ) : (
               <PlayCircle fontSize="large" />
             )}
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </Container>
     </AppBar>
