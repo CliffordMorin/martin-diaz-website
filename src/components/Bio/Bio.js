@@ -10,8 +10,12 @@ const Bio = () => {
   return (
     <div>
       <Grow in>
-        <Container sx={{ mt: 5 }}>
-          <Paper elevation={16} sx={{ pb: 5 }}>
+        <Container sx={{ mt: 5 }} maxWidth="xl">
+          <Paper
+            elevation={16}
+            sx={{ pb: 5 }}
+            style={{ backgroundColor: "#040404" }}
+          >
             <Typography
               variant="h2"
               align="center"
@@ -24,7 +28,7 @@ const Bio = () => {
             </Typography>
             <Grid container rowSpacing={2} columnSpacing={3}>
               <Grid item xs={12} md={6}>
-                <img className={classes.images} src={martin6} alt="glenn" />
+                <img className={classes.images} src={martin6} alt="martin" />
               </Grid>
               <Grid item xs={12} md={6}>
                 <Typography

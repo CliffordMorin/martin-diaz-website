@@ -1,15 +1,13 @@
 import React from "react";
 import { useEffect } from "react";
 import ImageGallery from "react-image-gallery";
-import glenn1 from "../../images/glenn1.jpeg";
-import glenn2 from "../../images/glenn2.jpg";
-import glenn3 from "../../images/glenn3.jpg";
-import glennTMA from "../../images/glennTMA.jpg";
-import group from "../../images/group.jpg";
-import head from "../../images/head.jpg";
-import head2 from "../../images/head2.jpg";
-import head3 from "../../images/head3.jpg";
-import head4 from "../../images/head4.jpg";
+import martin2 from "../../images/martin2.jpg";
+import martin3 from "../../images/martin3.jpg";
+import martin4 from "../../images/martin4.jpg";
+import martin5 from "../../images/martin5.jpg";
+import martin6 from "../../images/martin6.jpg";
+import martin7 from "../../images/martin7.jpg";
+import martin8 from "../../images/martin8.jpg";
 import makeStyles from "./styles";
 import { Container, Typography } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
@@ -17,40 +15,32 @@ import "./Media.css";
 
 const images = [
   {
-    original: glennTMA,
-    thumbnail: glennTMA,
+    original: martin5,
+    thumbnail: martin5,
   },
   {
-    original: group,
-    thumbnail: group,
+    original: martin6,
+    thumbnail: martin6,
   },
   {
-    original: head,
-    thumbnail: head,
+    original: martin7,
+    thumbnail: martin7,
   },
   {
-    original: head2,
-    thumbnail: head2,
+    original: martin8,
+    thumbnail: martin8,
   },
   {
-    original: head3,
-    thumbnail: head3,
+    original: martin2,
+    thumbnail: martin2,
   },
   {
-    original: head4,
-    thumbnail: head4,
+    original: martin3,
+    thumbnail: martin3,
   },
   {
-    original: glenn1,
-    thumbnail: glenn1,
-  },
-  {
-    original: glenn2,
-    thumbnail: glenn2,
-  },
-  {
-    original: glenn3,
-    thumbnail: glenn3,
+    original: martin4,
+    thumbnail: martin4,
   },
 ];
 
