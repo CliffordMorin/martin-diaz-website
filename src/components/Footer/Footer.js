@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Box, Typography } from "@mui/material";
 import { YouTube, Facebook, Favorite } from "@mui/icons-material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faSpotify } from "@fortawesome/free-brands-svg-icons";
 import makeStyles from "./styles";
 import "./style.css";
 
@@ -22,7 +22,7 @@ const Footer = () => {
           >
             <Box mb={1} pt={2}>
               <a
-                href="https://www.instagram.com/glenndon.gifford/?hl=en"
+                href="https://www.instagram.com/martindiazfreiria/"
                 target="_blank"
                 rel="noreferrer"
                 style={{ color: "#ffffff" }}
@@ -35,7 +35,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.youtube.com/user/TheGiffswing"
+                href="https://www.youtube.com/@martindiazfreiria/featured"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -47,7 +47,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.facebook.com/Glenn.Gifford"
+                href="https://www.facebook.com/martin.d.freiria"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -59,14 +59,14 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://soundcloud.com/glenndon-gifford"
+                href="https://open.spotify.com/artist/6UI1WZGepDltj9s5RU2HHJ?si=y4clMkNyQzWF26l9DoqSCA"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FontAwesomeIcon
-                  icon={faSoundcloud}
+                  icon={faSpotify}
                   className="fa-2x"
-                  style={{ color: "#FF7700", margin: "5px 10px" }}
+                  style={{ color: "#20DF64", margin: "10px 10px" }}
                 />
               </a>
             </Box>
