@@ -17,8 +17,19 @@ export default makeStyles((theme) => ({
       backgroundPosition: "60%",
     },
   },
+  link: {
+    textDecoration: "none",
+    color: theme.palette.secondary.main,
+    cursor: "pointer",
+    target: "_blank",
+  },
   textContainer: {
-    paddingTop: "20%",
+    paddingTop: "15%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginRight: "45%",
+    width: "40%",
 
     [theme.breakpoints.down("sm")]: {
       paddingTop: "5%",
