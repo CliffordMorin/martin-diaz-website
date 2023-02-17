@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
 
-import Roll from "react-reveal/Roll";
+import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
 
 const Home = () => {
@@ -10,24 +10,16 @@ const Home = () => {
     <div className={classes.container}>
       <Container className={classes.textContainer}>
         <Typography variant="h1">
-          <Roll left cascade>
-            MARTIN
-          </Roll>
+          <Bounce>MARTIN</Bounce>
         </Typography>
         <Typography variant="h1" sx={{ marginBottom: "20px" }}>
-          <Roll delay={500} left cascade>
-            DIAZ
-          </Roll>
+          <Bounce delay={500}>DIAZ</Bounce>
         </Typography>
         <Typography variant="h3">
-          <Roll delay={1000} left cascade>
-            Saxophonist, Flutist, Clarinetist
-          </Roll>
+          <Bounce delay={1000}>Saxophonist, Flutist, Clarinetist</Bounce>
         </Typography>
         <Typography variant="h3">
-          <Roll delay={1500} left cascade>
-            Composer and Arranger
-          </Roll>
+          <Bounce delay={1500}>Composer and Arranger</Bounce>
         </Typography>
       </Container>
     </div>

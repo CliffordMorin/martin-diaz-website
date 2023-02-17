@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grow, Paper, Typography, Grid } from "@mui/material";
 
-import Roll from "react-reveal/Roll";
+import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
 import martin6 from "../../images/martin6.jpg";
 
@@ -20,9 +20,7 @@ const Bio = () => {
               pt={5}
               gutterBottom
             >
-              <Roll left cascade>
-                Biography
-              </Roll>
+              <Bounce>Biography</Bounce>
             </Typography>
             <Grid container rowSpacing={2} columnSpacing={3}>
               <Grid item xs={12} md={6}>

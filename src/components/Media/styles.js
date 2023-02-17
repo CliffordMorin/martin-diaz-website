@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles((theme) => ({
   video: {
     overflow: "hidden",
-    paddingBottom: "56.25%",
+    paddingBottom: "30%",
     position: "relative",
     height: 0,
   },

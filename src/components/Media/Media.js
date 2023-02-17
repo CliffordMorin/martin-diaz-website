@@ -11,7 +11,7 @@ import head3 from "../../images/head3.jpg";
 import head4 from "../../images/head4.jpg";
 import makeStyles from "./styles";
 import { Container, Typography } from "@mui/material";
-import Roll from "react-reveal/Roll";
+import { Bounce } from "react-awesome-reveal";
 import "./Media.css";
 
 const images = [
@@ -58,66 +58,22 @@ const Media = () => {
   return (
     <div>
       <Typography align="center" variant="h2" sx={{ mt: 5 }}>
-        <Roll left cascade>
-          Media
-        </Roll>
+        <Bounce>Media</Bounce>
       </Typography>
       <Container sx={{ mt: 5 }}>
         <ImageGallery items={images} />
-        <Container sx={{ mt: 5, mb: 5 }}>
-          <iframe
-            width="100%"
-            height="166"
-            scrolling="no"
-            title="Martin Diaz"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1214053780&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-          ></iframe>
-          <div
-            style={{
-              fontSize: "10px",
-              color: "#cccccc",
-              lineBreak: "anywhere",
-              wordBreak: "normal",
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-              textOverflow: "ellipsis",
-              fontFamily:
-                "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
-              fontWeight: "100",
-            }}
-          >
-            <a
-              href="https://soundcloud.com/glenndon-gifford"
-              title="Martin Diaz"
-              target="_blank"
-              rel="noreferrer"
-              style={{ color: "#cccccc", textDecoration: "none" }}
-            >
-              Martin Diaz
-            </a>{" "}
-            ·{" "}
-            <a
-              href="https://soundcloud.com/glenndon-gifford/come-out-and-play"
-              title="come out and play"
-              target="_blank"
-              rel="noreferrer"
-              style={{ color: "#cccccc", textDecoration: "none" }}
-            >
-              come out and play
-            </a>
-          </div>
-        </Container>
+        <Typography align="center" variant="h2" sx={{ mt: 5, mb: 5 }}>
+          <Bounce>Videos</Bounce>
+        </Typography>
         <Container align="center" className={classes.video}>
           <iframe
             width="560"
             height="315"
             src="https://www.youtube.com/embed/wuf-jbppOog"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Container>
         <Container align="center" className={classes.video}>
@@ -126,9 +82,9 @@ const Media = () => {
             height="315"
             src="https://www.youtube.com/embed/0K4n30MFSwI"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Container>
         <Container align="center" className={classes.video}>
@@ -137,9 +93,9 @@ const Media = () => {
             height="315"
             src="https://www.youtube.com/embed/1rvO-lKaNiQ"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Container>
         <Container align="center" className={classes.video}>
@@ -148,9 +104,9 @@ const Media = () => {
             height="315"
             src="https://www.youtube.com/embed/vCaA_aq3Trw"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Container>
       </Container>
