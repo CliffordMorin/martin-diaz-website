@@ -16,21 +16,19 @@ const Bio = () => {
             sx={{ pb: 5 }}
             style={{ backgroundColor: "#040404" }}
           >
-            <Typography
-              variant="h2"
-              align="center"
-              className={classes.text}
-              py={4}
-              pt={5}
-              gutterBottom
-            >
+            <Typography variant="h2" align="center" pt={5} my={10} gutterBottom>
               <Bounce>Biography</Bounce>
             </Typography>
-            <Grid container rowSpacing={2} columnSpacing={3}>
+            <Grid
+              container
+              rowSpacing={2}
+              columnSpacing={3}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
               <Grid item xs={12} md={6}>
                 <img className={classes.images} src={martin6} alt="martin" />
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
                 <Typography
                   variant="body1"
                   align="center"

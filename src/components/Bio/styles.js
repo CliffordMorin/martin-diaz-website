@@ -9,5 +9,8 @@ export default makeStyles((theme) => ({
   },
   text: {
     color: "#fff",
+    textAlign: "justify",
+    textJustify: "inter-word",
+    padding: "10px 40px",
   },
 }));
