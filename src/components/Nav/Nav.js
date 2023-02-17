@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
+import useTheme from "@mui/material/styles/useTheme";
 
 import Button from "@mui/material/Button";
 
@@ -46,6 +47,7 @@ const Nav = () => {
   };
 
   const classes = useStyles();
+  const theme = useTheme();
 
   // const playPause = (e) => {
   //   if (isPlaying) {
@@ -58,7 +60,7 @@ const Nav = () => {
   // };
 
   return (
-    <AppBar className={classes.appBar} color="secondary" position="sticky">
+    <AppBar color="primary" position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to="/" style={{ textDecoration: "none", color: "unset" }}>
@@ -66,9 +68,14 @@ const Nav = () => {
               variant="h3"
               noWrap
               component="div"
-              sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "Montserrat Subrayada",
+              }}
             >
-              MARTIN DIAZ
+              <strong>MARTIN</strong>
+              <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
             </Typography>
           </Link>
 
@@ -130,9 +137,14 @@ const Nav = () => {
             variant="h3"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              fontFamily: "Montserrat Subrayada",
+            }}
           >
-            MARTIN DIAZ
+            <strong>MARTIN</strong>
+            <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>

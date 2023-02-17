@@ -16,7 +16,7 @@ const Footer = () => {
           <Container
             align="center"
             sx={{
-              backgroundColor: "secondary.main",
+              backgroundColor: "primary.main",
             }}
             maxWidth
           >

@@ -14,7 +14,7 @@ let theme = createTheme({
       primary: colorPalette["--timberwolf"],
     },
     primary: {
-      main: "#33383b",
+      main: colorPalette["--caf-noir-2"],
     },
     secondary: {
       main: colorPalette["--buff"],
@@ -26,28 +26,28 @@ let theme = createTheme({
   },
   typography: {
     h8: {
-      fontFamily: ["Merriweather", "serif"].join(","),
+      fontFamily: ["Montserrat", "serif"].join(","),
     },
     h7: {
-      fontFamily: ["Roboto Serif", "serif"].join(","),
+      fontFamily: ["Montserrat", "serif"].join(","),
     },
     h6: {
-      fontFamily: ["Merriweather", "serif"].join(","),
+      fontFamily: ["Montserrat", "serif"].join(","),
     },
     h5: {
-      fontFamily: ["Amatic SC", "cursive"].join(","),
+      fontFamily: ["Montserrat", "serif"].join(","),
     },
     h4: {
       fontFamily: ["Merriweather", "serif"].join(","),
     },
     h3: {
-      fontFamily: ["Amatic SC", "cursive"].join(","),
+      fontFamily: ["Poppins", "serif"].join(","),
     },
     h2: {
-      fontFamily: ["Amatic SC", "cursive"].join(","),
+      fontFamily: ["Poppins", "serif"].join(","),
     },
     h1: {
-      fontFamily: ["Amatic SC", "cursive"].join(","),
+      fontFamily: ["Montserrat Subrayada", "serif"].join(","),
     },
   },
 });
