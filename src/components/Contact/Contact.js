@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Container, Paper } from "@mui/material";
+import { Typography, Container } from "@mui/material";
 import martin1 from "../../images/compressed/martin1.png";
 import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
