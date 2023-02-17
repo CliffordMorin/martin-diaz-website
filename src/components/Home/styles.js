@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import glenn1 from "../../images/glenn1.jpeg";
+import martin1 from "../../images/compressed/martin1.png";
 
 export default makeStyles((theme) => ({
   images: {
@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     height: "auto",
   },
   container: {
-    backgroundImage: `url(${glenn1})`,
+    backgroundImage: `url(${martin1})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",

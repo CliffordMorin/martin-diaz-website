@@ -69,7 +69,7 @@ const Media = () => {
             width="100%"
             height="166"
             scrolling="no"
-            title="Glenndon Gifford"
+            title="Martin Diaz"
             frameBorder="no"
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1214053780&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
@@ -90,12 +90,12 @@ const Media = () => {
           >
             <a
               href="https://soundcloud.com/glenndon-gifford"
-              title="Glenndon Gifford"
+              title="Martin Diaz"
               target="_blank"
               rel="noreferrer"
               style={{ color: "#cccccc", textDecoration: "none" }}
             >
-              Glenndon Gifford
+              Martin Diaz
             </a>{" "}
             ·{" "}
             <a

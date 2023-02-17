@@ -11,22 +11,22 @@ const Home = () => {
       <Container className={classes.textContainer}>
         <Typography variant="h1">
           <Roll left cascade>
-            GLENNDON
+            MARTIN
           </Roll>
         </Typography>
         <Typography variant="h1" sx={{ marginBottom: "20px" }}>
           <Roll delay={500} left cascade>
-            GIFFORD
+            DIAZ
           </Roll>
         </Typography>
         <Typography variant="h3">
           <Roll delay={1000} left cascade>
-            Trumpeter, Teacher,
+            Saxophonist, Flutist, Clarinetist
           </Roll>
         </Typography>
         <Typography variant="h3">
           <Roll delay={1500} left cascade>
-            Vocalist and Arranger
+            Composer and Arranger
           </Roll>
         </Typography>
       </Container>

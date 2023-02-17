@@ -68,7 +68,7 @@ const Nav = () => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              GLENNDON GIFFORD
+              MARTIN DIAZ
             </Typography>
           </Link>
 
@@ -132,7 +132,7 @@ const Nav = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            GLENNDON GIFFORD
+            MARTIN DIAZ
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
