@@ -18,7 +18,7 @@ const Footer = () => {
             sx={{
               backgroundColor: "primary.main",
             }}
-            maxWidth
+            maxWidth="xl"
           >
             <Box mb={1} pt={2}>
               <a

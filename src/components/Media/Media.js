@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import ImageGallery from "react-image-gallery";
 import glenn1 from "../../images/glenn1.jpeg";
 import glenn2 from "../../images/glenn2.jpg";
@@ -55,6 +56,21 @@ const images = [
 
 const Media = () => {
   const classes = makeStyles();
+
+  useEffect(() => {
+    const handleResize = () => {
+      const containerWidth = document.querySelector(".video").offsetWidth;
+      const iframe = document.querySelector(".video iframe");
+      iframe.style.width = containerWidth + "px";
+      iframe.style.height = containerWidth * 0.5625 + "px"; // Maintain the 16:9 aspect ratio
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
       <Typography align="center" variant="h2" sx={{ mt: 5 }}>
@@ -65,10 +81,8 @@ const Media = () => {
         <Typography align="center" variant="h2" sx={{ mt: 5, mb: 5 }}>
           <Bounce>Videos</Bounce>
         </Typography>
-        <Container align="center" className={classes.video}>
+        <Container align="center" className={classes.video + "video"}>
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/wuf-jbppOog"
             title="YouTube video player"
             frameBorder="0"

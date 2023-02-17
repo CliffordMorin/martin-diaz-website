@@ -2,16 +2,17 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme) => ({
   video: {
-    overflow: "hidden",
-    paddingBottom: "30%",
-    position: "relative",
-    height: 0,
+    width: "100%",
   },
+
   iframe: {
-    left: "10%",
-    top: 0,
-    height: "80%",
-    width: "80%",
-    position: "absolute",
+    width: "100%",
+    paddingBottom: "56.25%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    video: {},
+    iframe: {
+      width: "100%",
+    },
   },
 }));
