@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -17,11 +17,11 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 
 //icons
-import { PlayCircle, PauseCircle } from "@mui/icons-material";
+// import { PlayCircle, PauseCircle } from "@mui/icons-material";
 
 //animation
 
-import useStyles from "./styles";
+// import useStyles from "./styles";
 
 const navlinks = [
   { page: "Home", link: "/", id: 0 },
@@ -46,7 +46,7 @@ const Nav = () => {
     setAnchorElNav(null);
   };
 
-  const classes = useStyles();
+  // const classes = useStyles();
   const theme = useTheme();
 
   // const playPause = (e) => {
