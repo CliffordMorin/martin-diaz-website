@@ -23,7 +23,7 @@ import { Link } from "react-router-dom";
 
 // import useStyles from "./styles";
 
-const navlinks = [
+const navLinks = [
   { page: "Home", link: "/", id: 0 },
   { page: "Bio", link: "/bio", id: 1 },
   { page: "Teaching", link: "/teaching", id: 2 },
@@ -113,7 +113,7 @@ const Nav = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {navlinks.map((item) => (
+              {navLinks.map((item) => (
                 <Link
                   to={item.link}
                   style={{ textDecoration: "none", color: "unset" }}
@@ -148,7 +148,7 @@ const Nav = () => {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {navlinks.map((item) => (
+            {navLinks.map((item) => (
               <Link
                 to={item.link}
                 style={{ textDecoration: "none", color: "unset" }}
