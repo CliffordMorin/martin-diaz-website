@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import ImageGallery from "react-image-gallery";
 import martin2 from "../../images/martin2.jpg";
 import martin3 from "../../images/martin3.jpg";
@@ -46,21 +46,6 @@ const images = [
 
 const Media = () => {
   const classes = makeStyles();
-
-  useEffect(() => {
-    const handleResize = () => {
-      const containerWidth = document.querySelector(".video").offsetWidth;
-      const iframe = document.querySelector(".video iframe");
-      iframe.style.width = containerWidth + "px";
-      iframe.style.height = containerWidth * 0.5625 + "px"; // Maintain the 16:9 aspect ratio
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div>
       <Typography align="center" variant="h2" sx={{ mt: 5 }}>
@@ -71,8 +56,11 @@ const Media = () => {
         <Typography align="center" variant="h2" sx={{ mt: 5, mb: 5 }}>
           <Bounce>Videos</Bounce>
         </Typography>
-        <Container align="center" className={classes.video + "video"}>
+        <Container align="center" className={classes.video}>
           <iframe
+            width="560"
+            height="315"
+            className={classes.iframe}
             src="https://www.youtube.com/embed/wuf-jbppOog"
             title="YouTube video player"
             frameBorder="0"
@@ -84,6 +72,7 @@ const Media = () => {
           <iframe
             width="560"
             height="315"
+            className={classes.iframe}
             src="https://www.youtube.com/embed/0K4n30MFSwI"
             title="YouTube video player"
             frameBorder="0"
@@ -95,6 +84,7 @@ const Media = () => {
           <iframe
             width="560"
             height="315"
+            className={classes.iframe}
             src="https://www.youtube.com/embed/1rvO-lKaNiQ"
             title="YouTube video player"
             frameBorder="0"
@@ -106,6 +96,7 @@ const Media = () => {
           <iframe
             width="560"
             height="315"
+            className={classes.iframe}
             src="https://www.youtube.com/embed/vCaA_aq3Trw"
             title="YouTube video player"
             frameBorder="0"
