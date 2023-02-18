@@ -21,7 +21,6 @@ export default makeStyles((theme) => ({
     textDecoration: "none",
     color: theme.palette.secondary.main,
     cursor: "pointer",
-    target: "_blank",
   },
   textContainer: {
     paddingTop: "15%",

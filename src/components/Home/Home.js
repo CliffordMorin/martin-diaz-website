@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Typography, Divider } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
-import { Bounce } from "react-awesome-reveal";
+import { AttentionSeeker } from "react-awesome-reveal";
 import makeStyles from "./styles";
 
 const Home = () => {
@@ -10,21 +10,22 @@ const Home = () => {
   return (
     <div className={classes.container}>
       <Container className={classes.textContainer}>
-        <Typography variant="h1">
-          <Bounce>
+        <AttentionSeeker effect="rubberBand">
+          <Typography variant="h1">
             <span style={{ display: "inline" }}>
               MARTIN
               <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
             </span>
-          </Bounce>
-        </Typography>
-
-        <Typography variant="h5">
-          <Bounce delay={1000}>Saxophonist, Flutist, Clarinetist</Bounce>
-        </Typography>
-        <Typography variant="h5">
-          <Bounce delay={1500}>Composer and Arranger</Bounce>
-        </Typography>
+          </Typography>
+        </AttentionSeeker>
+        <AttentionSeeker effect="tada" delay="100">
+          <Typography variant="h5">
+            Saxophonist, Flutist, Clarinetist
+          </Typography>
+        </AttentionSeeker>
+        <AttentionSeeker effect="tada" delay="150">
+          <Typography variant="h5">Composer and Arranger</Typography>
+        </AttentionSeeker>
         <Divider
           sx={{
             backgroundColor: theme.palette.secondary.main,
@@ -33,18 +34,20 @@ const Home = () => {
             margin: "20px auto",
           }}
         />
-        <Typography variant="h6" sx={{ marginBottom: "20px" }}>
-          New Album{" "}
-          <a
-            href="https://open.spotify.com/album/4lqu02Opk6iEkJlSQlRSgh?si=z-dtIJeIT7mY2fuv5OrXaQ"
-            className={classes.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            "IDENTITIES"
-          </a>{" "}
-          Available Now
-        </Typography>
+        <AttentionSeeker effect={"swing"} delay="200">
+          <Typography variant="h6" sx={{ marginBottom: "20px" }}>
+            New Album{" "}
+            <a
+              href="https://open.spotify.com/album/4lqu02Opk6iEkJlSQlRSgh?si=z-dtIJeIT7mY2fuv5OrXaQ"
+              className={classes.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              "IDENTITIES"
+            </a>{" "}
+            Available Now
+          </Typography>
+        </AttentionSeeker>
       </Container>
     </div>
   );
