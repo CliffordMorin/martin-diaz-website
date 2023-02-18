@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Grid, TextField, Button, useTheme } from "@mui/material";
+import emailjs from "emailjs-com";
+
+const SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID;
+const USER_ID = process.env.REACT_APP_YOUR_USER_ID;
 
 const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -7,14 +12,23 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const theme = useTheme();
+  const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Your code to handle form submission goes here
+
+    emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", form.current, "USER_ID").then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form ref={form} onSubmit={handleSubmit}>
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <TextField
