@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button, Typography, Menu, MenuItem, Box } from "@mui/material";
 import navLinks from "./navLinks";
@@ -20,50 +20,106 @@ import navLinks from "./navLinks";
 // ];
 
 const NavTabsDesktop = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
+  const [mediaMenuOpen, setMediaMenuOpen] = useState(false);
+  const aboutRef = useRef(null);
+  const mediaRef = useRef(null);
 
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleAboutMenuOpen = () => {
+    setAboutMenuOpen(true);
   };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
+  const handleAboutMenuClose = () => {
+    setAboutMenuOpen(false);
+  };
+
+  const handleMediaMenuOpen = () => {
+    setMediaMenuOpen(true);
+  };
+
+  const handleMediaMenuClose = () => {
+    setMediaMenuOpen(false);
   };
 
   return (
     <Box
       sx={{
-        flexGrow: 1,
         display: { xs: "none", md: "flex" },
-        flexWrap: "nowrap",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        flexGrow: 1,
+        flexBasis: "auto",
       }}
     >
       {navLinks.map((item) => {
         if (item.children) {
           return (
-            <div key={item.id}>
+            <div>
               <Button
-                onClick={handleMenuOpen}
-                sx={{ my: 2, color: "white", display: "block" }}
+                ref={item.page === "About" ? aboutRef : mediaRef}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                }}
+                onClick={() => {
+                  if (item.page === "About") {
+                    handleAboutMenuOpen();
+                  } else if (item.page === "Media") {
+                    handleMediaMenuOpen();
+                  }
+                }}
               >
                 <Typography variant="h7">{item.page}</Typography>
               </Button>
-              <Menu
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-                onClose={handleMenuClose}
-              >
-                {item.children.map((child) => (
-                  <MenuItem
-                    key={child.id}
-                    onClick={handleMenuClose}
-                    component={Link}
-                    to={child.link}
-                  >
-                    {child.page}
-                  </MenuItem>
-                ))}
-              </Menu>
+              {item.page === "About" && (
+                <Menu
+                  anchorEl={aboutRef.current}
+                  keepMounted
+                  open={Boolean(aboutMenuOpen)}
+                  onClose={handleAboutMenuClose}
+                >
+                  {item.children.map((childItem) => (
+                    <Link
+                      to={childItem.link}
+                      style={{
+                        textDecoration: "none",
+                        color: "unset",
+                        display: "block",
+                      }}
+                      key={childItem.id}
+                    >
+                      <MenuItem onClick={handleAboutMenuClose}>
+                        {childItem.page}
+                      </MenuItem>
+                    </Link>
+                  ))}
+                </Menu>
+              )}
+              {item.page === "Media" && (
+                <Menu
+                  anchorEl={mediaRef.current}
+                  keepMounted
+                  open={Boolean(mediaMenuOpen)}
+                  onClose={handleMediaMenuClose}
+                >
+                  {item.children.map((childItem) => (
+                    <Link
+                      to={childItem.link}
+                      style={{
+                        textDecoration: "none",
+                        color: "unset",
+                        display: "block",
+                      }}
+                      key={childItem.id}
+                    >
+                      <MenuItem onClick={handleMediaMenuClose}>
+                        {childItem.page}
+                      </MenuItem>
+                    </Link>
+                  ))}
+                </Menu>
+              )}
             </div>
           );
         } else {
@@ -74,8 +130,11 @@ const NavTabsDesktop = () => {
               key={item.id}
             >
               <Button
-                key={item.page}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                }}
               >
                 <Typography variant="h7">{item.page}</Typography>
               </Button>

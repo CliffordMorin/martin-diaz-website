@@ -9,9 +9,16 @@ const navLinksDesktop = [
     ],
   },
   { page: "Teaching", link: "/teaching", id: 4 },
-  { page: "Media", link: "/media", id: 5 },
-  { page: "Calender", link: "/calender", id: 6 },
-  { page: "Contact", link: "/contact", id: 7 },
+  {
+    page: "Media",
+    id: 5,
+    children: [
+      { page: "Videos", link: "/media/", id: 6 },
+      { page: "Pictures", link: "/", id: 7 },
+    ],
+  },
+  { page: "Calender", link: "/calender", id: 8 },
+  { page: "Contact", link: "/contact", id: 9 },
 ];
 
 export default navLinksDesktop;
