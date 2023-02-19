@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
+
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
+import NavTabsDesktop from "./NavTabsDesktop";
+
+import {
+  Tabs,
+  Tab,
+  Menu,
+  MenuItem,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Container,
+  Button,
+  Box,
+  Collapse,
+} from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
-
-import Button from "@mui/material/Button";
-
-import MenuItem from "@mui/material/MenuItem";
 
 // import song from "../../audio/come-out.wav";
 import { Link } from "react-router-dom";
@@ -23,26 +29,28 @@ import { Link } from "react-router-dom";
 
 // import useStyles from "./styles";
 
-const navLinks = [
+const navLinksMobile = [
   { page: "Home", link: "/", id: 0 },
   { page: "Bio", link: "/bio", id: 1 },
-  { page: "Teaching", link: "/teaching", id: 2 },
-  { page: "Media", link: "/media", id: 3 },
-  { page: "Calender", link: "/calender", id: 4 },
-  { page: "Contact", link: "/contact", id: 5 },
+  { page: "Discography", link: "/discography", id: 2 },
+  { page: "Teaching", link: "/teaching", id: 3 },
+  { page: "Media", link: "/media", id: 4 },
+  { page: "Calender", link: "/calender", id: 5 },
+  { page: "Contact", link: "/contact", id: 6 },
 ];
 
 const Nav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
+
   // const [isPlaying, setIsPlaying] = useState(false);
   // const audio = new Audio(song);
   // const audioRef = useRef(audio);
 
-  const handleOpenNavMenu = (event) => {
+  const handleMenuOpen = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleMenuClose = () => {
     setAnchorElNav(null);
   };
 
@@ -90,7 +98,7 @@ const Nav = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={handleMenuOpen}
               color="inherit"
             >
               <MenuIcon />
@@ -108,18 +116,18 @@ const Nav = () => {
                 horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              onClose={handleMenuClose}
               sx={{
                 display: { xs: "block", md: "none" },
               }}
             >
-              {navLinks.map((item) => (
+              {navLinksMobile.map((item) => (
                 <Link
                   to={item.link}
                   style={{ textDecoration: "none", color: "unset" }}
                   key={item.id}
                 >
-                  <MenuItem key={item.page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={item.page} onClick={handleMenuClose}>
                     <Typography
                       variant="h5"
                       textAlign="center"
@@ -147,23 +155,8 @@ const Nav = () => {
             <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {navLinks.map((item) => (
-              <Link
-                to={item.link}
-                style={{ textDecoration: "none", color: "unset" }}
-                key={item.id}
-              >
-                <Button
-                  key={item.page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  <Typography variant="h7">{item.page}</Typography>
-                </Button>
-              </Link>
-            ))}
-          </Box>
+          <NavTabsDesktop />
+
           {/* <IconButton
             color="warning"
             size="medium"
