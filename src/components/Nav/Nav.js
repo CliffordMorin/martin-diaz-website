@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-import MenuIcon from "@mui/icons-material/Menu";
 import NavTabsDesktop from "./NavTabsDesktop";
+import NavTabsMobile from "./NavTabsMobile";
 
 import {
   Tabs,
   Tab,
-  Menu,
-  MenuItem,
   AppBar,
   Toolbar,
   IconButton,
   Typography,
   Container,
-  Box,
 } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
 
@@ -27,30 +24,10 @@ import { Link } from "react-router-dom";
 
 // import useStyles from "./styles";
 
-const navLinksMobile = [
-  { page: "Home", link: "/", id: 0 },
-  { page: "Bio", link: "/bio", id: 1 },
-  { page: "Discography", link: "/discography", id: 2 },
-  { page: "Teaching", link: "/teaching", id: 3 },
-  { page: "Media", link: "/media", id: 4 },
-  { page: "Calender", link: "/calender", id: 5 },
-  { page: "Contact", link: "/contact", id: 6 },
-];
-
 const Nav = () => {
-  const [anchorElNav, setAnchorElNav] = useState(null);
-
   // const [isPlaying, setIsPlaying] = useState(false);
   // const audio = new Audio(song);
   // const audioRef = useRef(audio);
-
-  const handleMenuOpen = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorElNav(null);
-  };
 
   // const classes = useStyles();
   const theme = useTheme();
@@ -84,61 +61,7 @@ const Nav = () => {
               <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
             </Typography>
           </Link>
-
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-            }}
-          >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleMenuOpen}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleMenuClose}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {navLinksMobile.map((item) => (
-                <Link
-                  to={item.link}
-                  style={{ textDecoration: "none", color: "unset" }}
-                  key={item.id}
-                >
-                  <MenuItem key={item.page} onClick={handleMenuClose}>
-                    <Typography
-                      variant="h5"
-                      textAlign="center"
-                      sx={{ color: "#fff" }}
-                    >
-                      {item.page}
-                    </Typography>
-                  </MenuItem>
-                </Link>
-              ))}
-            </Menu>
-          </Box>
-
+          <NavTabsMobile />
           <Typography
             variant="h3"
             noWrap
