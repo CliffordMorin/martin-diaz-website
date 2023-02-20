@@ -14,7 +14,7 @@ export default makeStyles((theme) => ({
     height: "100vh",
 
     [theme.breakpoints.down("sm")]: {
-      backgroundPosition: "60%",
+      backgroundPosition: "80%",
     },
   },
   link: {
