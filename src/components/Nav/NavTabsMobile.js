@@ -111,7 +111,10 @@ const NavTabsDesktop = () => {
                       horizontal: "left",
                     }}
                     open={Boolean(aboutMenuOpen)}
-                    onClose={handleAboutMenuClose}
+                    onClose={() => {
+                      handleAboutMenuClose();
+                      handleMenuClose();
+                    }}
                   >
                     {item.children.map((childItem) => (
                       <Link
@@ -123,7 +126,12 @@ const NavTabsDesktop = () => {
                         }}
                         key={childItem.id}
                       >
-                        <MenuItem onClick={handleAboutMenuClose}>
+                        <MenuItem
+                          onClick={() => {
+                            handleAboutMenuClose();
+                            handleMenuClose();
+                          }}
+                        >
                           {childItem.page}
                         </MenuItem>
                       </Link>
@@ -143,7 +151,10 @@ const NavTabsDesktop = () => {
                       horizontal: "left",
                     }}
                     open={Boolean(mediaMenuOpen)}
-                    onClose={handleMediaMenuClose}
+                    onClose={() => {
+                      handleMediaMenuClose();
+                      handleMenuClose();
+                    }}
                   >
                     {item.children.map((childItem) => (
                       <Link
@@ -155,7 +166,12 @@ const NavTabsDesktop = () => {
                         }}
                         key={childItem.id}
                       >
-                        <MenuItem onClick={handleMediaMenuClose}>
+                        <MenuItem
+                          onClick={() => {
+                            handleMediaMenuClose();
+                            handleMenuClose();
+                          }}
+                        >
                           {childItem.page}
                         </MenuItem>
                       </Link>
@@ -177,6 +193,7 @@ const NavTabsDesktop = () => {
                     color: "white",
                     display: "block",
                   }}
+                  onClick={handleMenuClose}
                 >
                   <Typography variant="h7">{item.page}</Typography>
                 </Button>
