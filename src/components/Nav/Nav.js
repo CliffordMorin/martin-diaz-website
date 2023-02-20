@@ -3,15 +3,7 @@ import React from "react";
 import NavTabsDesktop from "./NavTabsDesktop";
 import NavTabsMobile from "./NavTabsMobile";
 
-import {
-  Tabs,
-  Tab,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Container,
-} from "@mui/material";
+import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
 
 // import song from "../../audio/come-out.wav";
