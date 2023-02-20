@@ -5,7 +5,9 @@ import Bio from "./components/Bio/Bio";
 import Discography from "./components/Discography/Discography";
 import Teaching from "./components/Teaching/Teaching";
 import Contact from "./components/Contact/Contact";
-import Media from "./components/Media/Media";
+import Videos from "./components/Videos/Videos";
+import Pictures from "./components/Pictures/Pictures";
+import EPK from "./components/EPK/EPK";
 import Calender from "./components/Calender/Calender";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
@@ -26,7 +28,9 @@ function App() {
           <Route path="/discography" element={<Discography />} />
           <Route path="/teaching" element={<Teaching />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/media" element={<Media />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/pictures" element={<Pictures />} />
+          <Route path="/epk" element={<EPK />} />
           <Route path="/calender" element={<Calender />} />
           <Route path="*" element={<Page404 />} />
         </Routes>

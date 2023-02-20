@@ -13,12 +13,13 @@ const navLinksDesktop = [
     page: "Media",
     id: 5,
     children: [
-      { page: "Videos", link: "/media/", id: 6 },
-      { page: "Pictures", link: "/", id: 7 },
+      { page: "Videos", link: "/videos", id: 6 },
+      { page: "Pictures", link: "/pictures", id: 7 },
+      { page: "EPK", link: "/epk", id: 8 },
     ],
   },
-  { page: "Calender", link: "/calender", id: 8 },
-  { page: "Contact", link: "/contact", id: 9 },
+  { page: "Calender", link: "/calender", id: 9 },
+  { page: "Contact", link: "/contact", id: 10 },
 ];
 
 export default navLinksDesktop;
