@@ -1,5 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import martin1 from "../../images/compressed/martin1.png";
+import martin4 from "../../images/martin4.jpg";
 
 export default makeStyles((theme) => ({
   container: {
@@ -9,7 +10,8 @@ export default makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     height: "100vh",
     [theme.breakpoints.down("sm")]: {
-      backgroundPosition: "60%",
+      backgroundImage: `url(${martin4})`,
+      backgroundPosition: "0%",
     },
   },
   mail: {
