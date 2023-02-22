@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, Grow, Paper, Typography, Grid } from "@mui/material";
+import useTheme from "@mui/material/styles/useTheme";
+import {
+  Container,
+  Grow,
+  Paper,
+  Typography,
+  Grid,
+  useMediaQuery,
+} from "@mui/material";
 
 import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
@@ -7,16 +15,20 @@ import martin6 from "../../images/martin6.jpg";
 
 const Bio = () => {
   const classes = makeStyles();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <div>
       <Grow in>
         <Container sx={{ mt: 5 }} maxWidth="xl">
-          <Paper
-            elevation={16}
-            sx={{ pb: 5 }}
-            style={{ backgroundColor: "#040404" }}
-          >
-            <Typography variant="h2" align="center" pt={5} my={10} gutterBottom>
+          <Paper elevation={16} pb={5} style={{ backgroundColor: "#040404" }}>
+            <Typography
+              variant="h2"
+              align="center"
+              pt={5}
+              my={isSmallScreen ? 2 : 10}
+              gutterBottom
+            >
               <Bounce>Biography</Bounce>
             </Typography>
             <Grid

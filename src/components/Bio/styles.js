@@ -6,6 +6,9 @@ export default makeStyles((theme) => ({
     padding: "0px",
     margin: "0px",
     position: "relative",
+    [theme.breakpoints.down("sm")]: {
+      width: "98%",
+    },
   },
   text: {
     color: "#fff",
