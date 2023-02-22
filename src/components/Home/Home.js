@@ -1,21 +1,64 @@
 import React from "react";
-import { Container, Typography, Divider } from "@mui/material";
+import { Container, Typography, Divider, useMediaQuery } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
 import { AttentionSeeker } from "react-awesome-reveal";
 import makeStyles from "./styles";
 
 const Home = () => {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = makeStyles();
   return (
-    <div className={classes.container}>
-      <Container className={classes.textContainer}>
+    <Container
+      className={classes.container}
+      sx={{
+        [theme.breakpoints.down("sm")]: {
+          ml: 0,
+          pl: 0,
+        },
+      }}
+      maxWidth={isSmallScreen ? "sm" : "xl"}
+    >
+      <Container
+        className={classes.textContainer}
+        sx={{
+          ml: 0,
+          [theme.breakpoints.down("sm")]: {
+            width: "60%",
+            pt: "50%",
+            ml: 3,
+            pl: 0,
+          },
+        }}
+        maxWidth={isSmallScreen ? "sm" : "lg"}
+      >
         <AttentionSeeker effect="rubberBand">
-          <Typography variant="h1">
-            <span style={{ display: "inline" }}>
-              MARTIN
-              <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
-            </span>
+          <Typography
+            component="span"
+            variant="h1"
+            sx={{
+              display: "inline",
+              [theme.breakpoints.down("sm")]: {
+                display: "block",
+                wordWrap: "break-word",
+                pb: 18,
+              },
+            }}
+          >
+            MARTIN
+            <Typography
+              variant="h1"
+              component="span"
+              sx={{
+                display: "inline",
+                color: theme.palette.secondary.main,
+                [theme.breakpoints.down("sm")]: {
+                  pl: 5,
+                },
+              }}
+            >
+              DIAZ
+            </Typography>
           </Typography>
         </AttentionSeeker>
         <AttentionSeeker effect="tada" delay="100">
@@ -32,6 +75,10 @@ const Home = () => {
             width: "20%",
             height: "2px",
             margin: "20px auto",
+            [theme.breakpoints.down("sm")]: {
+              width: "40%",
+              ml: 0,
+            },
           }}
         />
         <AttentionSeeker effect={"swing"} delay="200">
@@ -49,7 +96,7 @@ const Home = () => {
           </Typography>
         </AttentionSeeker>
       </Container>
-    </div>
+    </Container>
   );
 };
 

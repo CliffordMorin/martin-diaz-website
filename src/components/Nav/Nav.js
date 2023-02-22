@@ -61,13 +61,15 @@ const Nav = () => {
             noWrap
             component="div"
             sx={{
-              flexGrow: 1,
               display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              justifyContent: "center",
               fontFamily: "Montserrat Subrayada",
             }}
           >
             <strong>MARTIN</strong>
             <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
+            <img className={classes.images} src={logo} alt="martin" />
           </Typography>
 
           <NavTabsDesktop />
