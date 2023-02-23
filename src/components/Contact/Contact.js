@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Typography,
-  Container,
-  Paper,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
+import { Typography, Container, Paper, useTheme } from "@mui/material";
 import { alpha } from "@mui/material/styles";
 import { Fade } from "react-awesome-reveal";
 import makeStyles from "./styles";
@@ -14,7 +8,7 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   const classes = makeStyles();
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <div>
       <Container className={classes.container} maxWidth="xl">
