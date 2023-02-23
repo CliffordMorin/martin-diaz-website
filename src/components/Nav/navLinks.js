@@ -15,7 +15,11 @@ const navLinksDesktop = [
     children: [
       { page: "Videos", link: "/videos", id: 6 },
       { page: "Pictures", link: "/pictures", id: 7 },
-      { page: "EPK", link: "/epk", id: 8 },
+      {
+        page: "EPK",
+        link: "https://drive.google.com/file/d/1F324HfSH12jcc-HNdzSMt69jKWNUh4Ri/view?usp=sharing",
+        id: 8,
+      },
     ],
   },
   { page: "Calender", link: "/calender", id: 9 },

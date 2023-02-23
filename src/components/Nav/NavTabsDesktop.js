@@ -88,21 +88,39 @@ const NavTabsDesktop = () => {
                   open={Boolean(mediaMenuOpen)}
                   onClose={handleMediaMenuClose}
                 >
-                  {item.children.map((childItem) => (
-                    <Link
-                      to={childItem.link}
-                      style={{
-                        textDecoration: "none",
-                        color: "unset",
-                        display: "block",
-                      }}
-                      key={childItem.id}
-                    >
-                      <MenuItem onClick={handleMediaMenuClose}>
-                        {childItem.page}
-                      </MenuItem>
-                    </Link>
-                  ))}
+                  {item.children.map((childItem) =>
+                    childItem.page === "EPK" ? (
+                      <a
+                        href={childItem.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: "none",
+                          color: "unset",
+                          display: "block",
+                        }}
+                        key={childItem.id}
+                      >
+                        <MenuItem onClick={handleAboutMenuClose}>
+                          {childItem.page}
+                        </MenuItem>
+                      </a>
+                    ) : (
+                      <Link
+                        to={childItem.link}
+                        style={{
+                          textDecoration: "none",
+                          color: "unset",
+                          display: "block",
+                        }}
+                        key={childItem.id}
+                      >
+                        <MenuItem onClick={handleAboutMenuClose}>
+                          {childItem.page}
+                        </MenuItem>
+                      </Link>
+                    )
+                  )}
                 </Menu>
               )}
             </div>

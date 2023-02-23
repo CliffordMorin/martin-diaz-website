@@ -156,26 +156,49 @@ const NavTabsDesktop = () => {
                       handleMenuClose();
                     }}
                   >
-                    {item.children.map((childItem) => (
-                      <Link
-                        to={childItem.link}
-                        style={{
-                          textDecoration: "none",
-                          color: "unset",
-                          display: "block",
-                        }}
-                        key={childItem.id}
-                      >
-                        <MenuItem
-                          onClick={() => {
-                            handleMediaMenuClose();
-                            handleMenuClose();
+                    {item.children.map((childItem) =>
+                      childItem.page === "EPK" ? (
+                        <a
+                          href={childItem.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{
+                            textDecoration: "none",
+                            color: "unset",
+                            display: "block",
                           }}
+                          key={childItem.id}
                         >
-                          {childItem.page}
-                        </MenuItem>
-                      </Link>
-                    ))}
+                          <MenuItem
+                            onClick={() => {
+                              handleMediaMenuClose();
+                              handleMenuClose();
+                            }}
+                          >
+                            {childItem.page}
+                          </MenuItem>
+                        </a>
+                      ) : (
+                        <Link
+                          to={childItem.link}
+                          style={{
+                            textDecoration: "none",
+                            color: "unset",
+                            display: "block",
+                          }}
+                          key={childItem.id}
+                        >
+                          <MenuItem
+                            onClick={() => {
+                              handleMediaMenuClose();
+                              handleMenuClose();
+                            }}
+                          >
+                            {childItem.page}
+                          </MenuItem>
+                        </Link>
+                      )
+                    )}
                   </Menu>
                 )}
               </div>
