@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       textAlign: "left",
       "& span": {
-        fontSize: "3.3rem",
+        fontSize: "3rem",
       },
       "& h5": {
         fontSize: "1.3rem",

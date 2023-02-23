@@ -77,7 +77,7 @@ const Home = () => {
           ml: 0,
           [theme.breakpoints.down("sm")]: {
             width: "60%",
-            pt: "50%",
+            pt: "20%",
             ml: 3,
             pl: 0,
           },
@@ -93,7 +93,7 @@ const Home = () => {
               [theme.breakpoints.down("sm")]: {
                 display: "block",
                 wordWrap: "break-word",
-                pb: 18,
+                pb: 10,
               },
             }}
           >
