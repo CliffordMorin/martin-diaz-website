@@ -1,23 +1,30 @@
 import React from "react";
 import { Typography, Paper, Container, Grid } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
-import teaching from "../../images/kids.jpg";
+import martin8 from "../../images/martin8.jpg";
 import makeStyles from "./styles";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Teaching = () => {
   const classes = makeStyles();
   return (
     <Container align="center" sx={{ mt: 5 }}>
-      <Paper elevation={16} sx={{ py: 5, px: 1 }}>
+      <Paper
+        elevation={16}
+        sx={{ py: 5, px: 1 }}
+        style={{ backgroundColor: "#040404" }}
+      >
         <Typography sx={{ pb: 5 }} variant="h2" align="center">
           <Bounce>Teaching</Bounce>
         </Typography>
 
         <Grid container rowSpacing={2} columnSpacing={3}>
           <Grid item xs={12} md={6}>
-            <img
+            <LazyLoadImage
               style={{ width: "100%", height: "auto" }}
-              src={teaching}
+              effect="blur"
+              src={martin8}
               alt="glenn"
             />
           </Grid>

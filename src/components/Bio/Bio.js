@@ -12,6 +12,8 @@ import {
 import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
 import martin6 from "../../images/martin6.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Bio = () => {
   const classes = makeStyles();
@@ -38,14 +40,20 @@ const Bio = () => {
               style={{ display: "flex", justifyContent: "center" }}
             >
               <Grid item xs={12} md={6}>
-                <img className={classes.images} src={martin6} alt="martin" />
+                <LazyLoadImage
+                  className={classes.images}
+                  src={martin6}
+                  effect="blur"
+                  alt="martin"
+                />
               </Grid>
               <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
                 <Typography
                   variant="body1"
                   align="center"
                   className={classes.text}
-                  p={2}
+                  py={isSmallScreen ? 0 : 2}
+                  px={2}
                 >
                   {" "}
                   The Catalan saxophonist and composer Martín Díaz is at the

@@ -1,5 +1,4 @@
 import React from "react";
-// import { useEffect } from "react";
 import ImageGallery from "react-image-gallery";
 import martin2 from "../../images/martin2.jpg";
 import martin3 from "../../images/martin3.jpg";
@@ -10,6 +9,7 @@ import martin7 from "../../images/martin7.jpg";
 import martin8 from "../../images/martin8.jpg";
 import { Container, Typography } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
+
 import "./Pictures.css";
 
 const images = [
@@ -50,7 +50,7 @@ const Pictures = () => {
         <Bounce>Pictures</Bounce>
       </Typography>
       <Container sx={{ mt: 5 }}>
-        <ImageGallery items={images} />
+        <ImageGallery items={images} lazyLoad={true} />
       </Container>
     </div>
   );

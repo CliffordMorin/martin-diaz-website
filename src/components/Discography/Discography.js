@@ -8,6 +8,8 @@ import {
   Grid,
   useMediaQuery,
 } from "@mui/material";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
@@ -42,7 +44,12 @@ const Discography = () => {
               style={{ display: "flex", justifyContent: "center" }}
             >
               <Grid item xs={12} md={6}>
-                <img className={classes.images} src={band} alt="martin" />
+                <LazyLoadImage
+                  className={classes.images}
+                  src={band}
+                  effect="blur"
+                  alt="martin"
+                />
               </Grid>
               <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
                 <iframe

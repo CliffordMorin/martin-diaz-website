@@ -15,5 +15,8 @@ export default makeStyles((theme) => ({
     textAlign: "justify",
     textJustify: "inter-word",
     padding: "10px 40px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px 10px",
+    },
   },
 }));
