@@ -2,10 +2,14 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme) => ({
   images: {
-    width: "120%",
+    width: "100%",
     padding: "0px",
-    margin: "0px",
+    borderRadius: "10px",
+    margin: "0px 10px",
     position: "relative",
+    [theme.breakpoints.down("sm")]: {
+      width: "95%",
+    },
   },
   text: {
     color: "#fff",
