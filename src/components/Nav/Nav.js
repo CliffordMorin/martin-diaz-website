@@ -56,21 +56,23 @@ const Nav = () => {
             </Typography>
           </Link>
           <NavTabsMobile />
-          <Typography
-            variant="h3"
-            noWrap
-            component="div"
-            sx={{
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              justifyContent: "center",
-              fontFamily: "Montserrat Subrayada",
-            }}
-          >
-            <strong>MARTIN</strong>
-            <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
-            <img className={classes.images} src={logo} alt="martin" />
-          </Typography>
+          <Link to="/" style={{ textDecoration: "none", color: "unset" }}>
+            <Typography
+              variant="h3"
+              noWrap
+              component="div"
+              sx={{
+                display: { xs: "flex", md: "none" },
+                flexGrow: 1,
+                justifyContent: "center",
+                fontFamily: "Montserrat Subrayada",
+              }}
+            >
+              <strong>MARTIN</strong>
+              <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
+              <img className={classes.images} src={logo} alt="martin" />
+            </Typography>
+          </Link>
 
           <NavTabsDesktop />
 

@@ -1,5 +1,15 @@
-import React from "react";
-import { Container, Typography, Divider, useMediaQuery } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import {
+  Container,
+  Typography,
+  Divider,
+  useMediaQuery,
+  Snackbar,
+  Alert,
+  IconButton,
+  Slide,
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import useTheme from "@mui/material/styles/useTheme";
 import { AttentionSeeker } from "react-awesome-reveal";
 import makeStyles from "./styles";
@@ -8,6 +18,22 @@ const Home = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = makeStyles();
+  const [open, setOpen] = useState(true);
+
+  const TransitionDown = (props) => {
+    return <Slide {...props} direction="down" />;
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    setOpen(true);
+  }, []);
+
   return (
     <Container
       className={classes.container}
@@ -19,6 +45,32 @@ const Home = () => {
       }}
       maxWidth={isSmallScreen ? "sm" : "xl"}
     >
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        TransitionComponent={TransitionDown}
+      >
+        <Alert
+          elevation={6}
+          variant="filled"
+          severity="info"
+          action={
+            <>
+              <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={handleClose}
+              >
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            </>
+          }
+        >
+          New album "The Dam Jawn" coming soon!{" "}
+        </Alert>
+      </Snackbar>
       <Container
         className={classes.textContainer}
         sx={{
