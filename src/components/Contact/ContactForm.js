@@ -16,6 +16,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(SERVICE_ID, TEMPLATE_ID, USER_ID);
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID).then(
       (result) => {

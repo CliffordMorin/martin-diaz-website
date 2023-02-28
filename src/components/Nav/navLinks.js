@@ -8,22 +8,21 @@ const navLinksDesktop = [
       { page: "Discography", link: "/discography", id: 3 },
     ],
   },
-  { page: "Teaching", link: "/teaching", id: 4 },
   {
     page: "Media",
-    id: 5,
+    id: 4,
     children: [
-      { page: "Videos", link: "/videos", id: 6 },
-      { page: "Pictures", link: "/pictures", id: 7 },
+      { page: "Videos", link: "/videos", id: 5 },
+      { page: "Pictures", link: "/pictures", id: 6 },
       {
         page: "EPK",
         link: "https://drive.google.com/file/d/1F324HfSH12jcc-HNdzSMt69jKWNUh4Ri/view?usp=sharing",
-        id: 8,
+        id: 7,
       },
     ],
   },
-  { page: "Calender", link: "/calender", id: 9 },
-  { page: "Contact", link: "/contact", id: 10 },
+  { page: "Calender", link: "/calender", id: 8 },
+  { page: "Contact", link: "/contact", id: 9 },
 ];
 
 export default navLinksDesktop;

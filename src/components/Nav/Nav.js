@@ -2,7 +2,6 @@ import React from "react";
 
 import NavTabsDesktop from "./NavTabsDesktop";
 import NavTabsMobile from "./NavTabsMobile";
-import logo from "../../images/logo.png";
 
 import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 import useTheme from "@mui/material/styles/useTheme";
@@ -15,14 +14,11 @@ import { Link } from "react-router-dom";
 
 //animation
 
-import useStyles from "./styles";
-
 const Nav = () => {
   // const [isPlaying, setIsPlaying] = useState(false);
   // const audio = new Audio(song);
   // const audioRef = useRef(audio);
 
-  const classes = useStyles();
   const theme = useTheme();
 
   // const playPause = (e) => {
@@ -52,11 +48,16 @@ const Nav = () => {
             >
               <strong>MARTIN</strong>
               <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
-              <img className={classes.images} src={logo} alt="martin" />
             </Typography>
           </Link>
           <NavTabsMobile />
-          <Link to="/" style={{ textDecoration: "none", color: "unset" }}>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "unset",
+            }}
+          >
             <Typography
               variant="h3"
               noWrap
@@ -64,13 +65,14 @@ const Nav = () => {
               sx={{
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
+                textAlign: "center",
                 justifyContent: "center",
+                alignItems: "center",
                 fontFamily: "Montserrat Subrayada",
               }}
             >
               <strong>MARTIN</strong>
               <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
-              <img className={classes.images} src={logo} alt="martin" />
             </Typography>
           </Link>
 

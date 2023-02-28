@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import useTheme from "@mui/material/styles/useTheme";
-import { AttentionSeeker } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import makeStyles from "./styles";
 
 const Home = () => {
@@ -84,7 +84,7 @@ const Home = () => {
         }}
         maxWidth={isSmallScreen ? "sm" : "lg"}
       >
-        <AttentionSeeker effect="rubberBand">
+        <Fade delay="50">
           <Typography
             component="span"
             variant="h1"
@@ -112,28 +112,30 @@ const Home = () => {
               DIAZ
             </Typography>
           </Typography>
-        </AttentionSeeker>
-        <AttentionSeeker effect="tada" delay="100">
+        </Fade>
+        {/* <Fade effect="tada" delay="100">
           <Typography variant="h5">
             Saxophonist, Flutist, Clarinetist
           </Typography>
-        </AttentionSeeker>
-        <AttentionSeeker effect="tada" delay="150">
+        </Fade>
+        <Fade effect="tada" delay="150">
           <Typography variant="h5">Composer and Arranger</Typography>
-        </AttentionSeeker>
-        <Divider
-          sx={{
-            backgroundColor: theme.palette.secondary.main,
-            width: "20%",
-            height: "2px",
-            margin: "20px auto",
-            [theme.breakpoints.down("sm")]: {
-              width: "40%",
-              ml: 0,
-            },
-          }}
-        />
-        <AttentionSeeker effect={"swing"} delay="200">
+        </Fade> */}
+        <Fade delay="100">
+          <Divider
+            sx={{
+              backgroundColor: theme.palette.secondary.main,
+              width: "20%",
+              height: "2px",
+              margin: "20px auto",
+              [theme.breakpoints.down("sm")]: {
+                width: "40%",
+                ml: 0,
+              },
+            }}
+          />
+        </Fade>
+        <Fade delay="150">
           <Typography variant="h6" sx={{ marginBottom: "20px" }}>
             New Album{" "}
             <a
@@ -146,7 +148,7 @@ const Home = () => {
             </a>{" "}
             Available Now
           </Typography>
-        </AttentionSeeker>
+        </Fade>
       </Container>
     </Container>
   );
