@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Grid, TextField, Button, useTheme } from "@mui/material";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID;
@@ -16,20 +18,32 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(SERVICE_ID, TEMPLATE_ID, USER_ID);
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID).then(
       (result) => {
+        toast.success(
+          "Message sent successfully! Thank you, we will get back to you as soon as possible!",
+          { theme: "colored", position: "bottom-left" }
+        );
         console.log(result.text);
       },
       (error) => {
+        toast.error("Message failed to send, sorry. Please try again later.", {
+          theme: "colored",
+          position: "bottom-left",
+        });
         console.log(error.text);
       }
     );
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
     <form ref={form} onSubmit={handleSubmit}>
+      <ToastContainer />
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <TextField
