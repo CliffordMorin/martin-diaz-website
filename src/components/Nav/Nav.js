@@ -59,15 +59,12 @@ const Nav = () => {
             }}
           >
             <Typography
-              variant="h3"
+              variant="h4"
               noWrap
               component="div"
               sx={{
+                ml: 8,
                 display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
                 fontFamily: "Montserrat Subrayada",
               }}
             >

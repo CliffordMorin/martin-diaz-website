@@ -16,6 +16,14 @@ const ContactForm = () => {
   const theme = useTheme();
   const form = useRef();
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      e.stopPropagation();
+      handleSubmit(e);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -42,7 +50,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={handleSubmit}>
+    <form ref={form} onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
       <ToastContainer />
       <Grid container spacing={2}>
         <Grid item xs={6}>
@@ -58,6 +66,7 @@ const ContactForm = () => {
               style: { color: theme.palette.primary.main },
             }}
             onChange={(e) => setFirstName(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </Grid>
         <Grid item xs={6}>
@@ -73,6 +82,7 @@ const ContactForm = () => {
               style: { color: theme.palette.primary.main },
             }}
             onChange={(e) => setLastName(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </Grid>
         <Grid item xs={12}>
@@ -89,6 +99,7 @@ const ContactForm = () => {
               style: { color: theme.palette.primary.main },
             }}
             onChange={(e) => setEmail(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </Grid>
         <Grid item xs={12}>
@@ -106,6 +117,7 @@ const ContactForm = () => {
               style: { color: theme.palette.primary.main },
             }}
             onChange={(e) => setMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </Grid>
         <Grid item xs={12}>

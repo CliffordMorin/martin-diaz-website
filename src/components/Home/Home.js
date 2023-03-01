@@ -91,8 +91,6 @@ const Home = () => {
             sx={{
               display: "inline",
               [theme.breakpoints.down("sm")]: {
-                display: "block",
-                wordWrap: "break-word",
                 pb: 10,
               },
             }}
@@ -104,9 +102,6 @@ const Home = () => {
               sx={{
                 display: "inline",
                 color: theme.palette.secondary.main,
-                [theme.breakpoints.down("sm")]: {
-                  pl: 5,
-                },
               }}
             >
               DIAZ
@@ -121,20 +116,21 @@ const Home = () => {
         <Fade effect="tada" delay="150">
           <Typography variant="h5">Composer and Arranger</Typography>
         </Fade> */}
-        <Fade delay="100">
-          <Divider
-            sx={{
-              backgroundColor: theme.palette.secondary.main,
-              width: "20%",
-              height: "2px",
-              margin: "20px auto",
-              [theme.breakpoints.down("sm")]: {
-                width: "40%",
-                ml: 0,
-              },
-            }}
-          />
-        </Fade>
+
+        <Divider
+          sx={{
+            backgroundColor: theme.palette.secondary.main,
+            width: "20%",
+            height: "2px",
+            margin: "20px auto",
+            display: "block",
+            [theme.breakpoints.down("sm")]: {
+              width: "40%",
+              ml: 0,
+            },
+          }}
+        />
+
         <Fade delay="150">
           <Typography variant="h6" sx={{ marginBottom: "20px" }}>
             New Album{" "}

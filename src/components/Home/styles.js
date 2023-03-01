@@ -23,10 +23,13 @@ export default makeStyles((theme) => ({
     textAlign: "center",
     flexDirection: "column",
     alignItems: "center",
-    width: "40%",
+    width: "100%",
 
     [theme.breakpoints.down("sm")]: {
+      paddingTop: "10%",
+      display: "block",
       textAlign: "left",
+      width: "40%",
       "& span": {
         fontSize: "3rem",
       },

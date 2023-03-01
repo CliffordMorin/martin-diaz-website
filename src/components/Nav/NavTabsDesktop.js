@@ -39,7 +39,7 @@ const NavTabsDesktop = () => {
       {navLinks.map((item) => {
         if (item.children) {
           return (
-            <div>
+            <div key={item.id}>
               <Button
                 ref={item.page === "About" ? aboutRef : mediaRef}
                 sx={{
@@ -54,6 +54,7 @@ const NavTabsDesktop = () => {
                     handleMediaMenuOpen();
                   }
                 }}
+                key={item.id}
               >
                 <Typography variant="h7">{item.page}</Typography>
               </Button>
