@@ -9,16 +9,31 @@ export default makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "100vh",
+    paddingTop: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
       backgroundImage: `url(${martin4})`,
       backgroundPosition: "0%",
+      paddingTop: theme.spacing(4),
     },
   },
-  mail: {
-    textDecoration: "none",
-    color: "#ffffff",
-    "&:hover": {
-      textDecoration: "underline",
+  wrapper: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
+    width: "100%",
+  },
+
+  heading: {
+    marginBottom: theme.spacing(3),
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: theme.spacing(2),
     },
+  },
+  paperContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
   },
 }));

@@ -139,7 +139,7 @@ const ContactForm = () => {
             onKeyDown={handleKeyDown}
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ textAlign: "center" }}>
           <Button type="submit" variant="contained" color="primary">
             Submit
           </Button>

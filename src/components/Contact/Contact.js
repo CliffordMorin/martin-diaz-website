@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Container, Paper, useTheme } from "@mui/material";
+import { Typography, Container, Paper, useTheme, Divider } from "@mui/material";
 import { alpha } from "@mui/material/styles";
 import { Fade } from "react-awesome-reveal";
 import makeStyles from "./styles";
@@ -10,37 +10,32 @@ const Contact = () => {
   const theme = useTheme();
 
   return (
-    <div>
+    <div className={classes.wrapper}>
       <Container className={classes.container} maxWidth="xl">
         <Fade>
-          <Typography
-            sx={{
-              pt: 5,
-              mr: 45,
-              [theme.breakpoints.down("sm")]: {
-                mr: 0,
-                pt: 4,
-              },
-            }}
-            variant="h3"
-            align="center"
-          >
+          <Typography variant="h3" align="center" className={classes.heading}>
             CONTACT
           </Typography>
         </Fade>
-
-        <Container align="center" sx={{ mt: 5 }}>
+        <Divider
+          sx={{
+            zIndex: "100",
+            backgroundColor: theme.palette.text.primary,
+            height: "2px",
+            width: "100px",
+            margin: "auto",
+            mb: 5,
+          }}
+        />
+        <div className={classes.paperContainer}>
           <Paper
             elevation={16}
             sx={{
               py: 5,
               px: 5,
-              mr: 45,
               backgroundColor: alpha(theme.palette.secondary.main, 0.8),
               [theme.breakpoints.down("sm")]: {
                 backgroundColor: alpha(theme.palette.secondary.main, 0.8),
-                mr: 0,
-                mt: 5,
                 px: 1,
                 py: 1,
               },
@@ -48,7 +43,7 @@ const Contact = () => {
           >
             <ContactForm />
           </Paper>
-        </Container>
+        </div>
       </Container>
     </div>
   );
