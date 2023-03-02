@@ -54,7 +54,6 @@ const NavTabsDesktop = () => {
                     handleMediaMenuOpen();
                   }
                 }}
-                key={item.id}
               >
                 <Typography variant="h6">{item.page}</Typography>
               </Button>
@@ -75,7 +74,10 @@ const NavTabsDesktop = () => {
                       }}
                       key={childItem.id}
                     >
-                      <MenuItem onClick={handleAboutMenuClose}>
+                      <MenuItem
+                        onClick={handleAboutMenuClose}
+                        key={childItem.id}
+                      >
                         {childItem.page}
                       </MenuItem>
                     </Link>
@@ -88,6 +90,7 @@ const NavTabsDesktop = () => {
                   keepMounted
                   open={Boolean(mediaMenuOpen)}
                   onClose={handleMediaMenuClose}
+                  key={item.id}
                 >
                   {item.children.map((childItem) =>
                     childItem.page === "EPK" ? (
@@ -102,7 +105,10 @@ const NavTabsDesktop = () => {
                         }}
                         key={childItem.id}
                       >
-                        <MenuItem onClick={handleAboutMenuClose}>
+                        <MenuItem
+                          onClick={handleAboutMenuClose}
+                          key={childItem.id}
+                        >
                           {childItem.page}
                         </MenuItem>
                       </a>
@@ -116,7 +122,10 @@ const NavTabsDesktop = () => {
                         }}
                         key={childItem.id}
                       >
-                        <MenuItem onClick={handleAboutMenuClose}>
+                        <MenuItem
+                          onClick={handleAboutMenuClose}
+                          key={childItem.id}
+                        >
                           {childItem.page}
                         </MenuItem>
                       </Link>
@@ -139,8 +148,11 @@ const NavTabsDesktop = () => {
                   color: "white",
                   display: "block",
                 }}
+                key={item.id}
               >
-                <Typography variant="h6">{item.page}</Typography>
+                <Typography variant="h6" key={item.id}>
+                  {item.page}
+                </Typography>
               </Button>
             </Link>
           );

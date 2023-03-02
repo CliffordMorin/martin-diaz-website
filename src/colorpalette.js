@@ -58,6 +58,15 @@ let theme = createTheme({
     h1: {
       fontFamily: fonts.header2,
     },
+    body1: {
+      fontFamily: fonts.body1,
+    },
+    body2: {
+      fontFamily: fonts.body2,
+    },
+    body3: {
+      fontFamily: fonts.body3,
+    },
   },
 });
 

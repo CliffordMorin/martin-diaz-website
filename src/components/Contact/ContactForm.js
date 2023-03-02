@@ -27,6 +27,16 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Check if required fields are filled
+    if (!firstName || !lastName || !email || !message) {
+      toast.error("Please fill in all required fields.", {
+        theme: "colored",
+        position: "bottom-left",
+      });
+      return;
+    }
+
+    // If all required fields are filled, submit the form
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID).then(
       (result) => {
         toast.success(
@@ -43,6 +53,8 @@ const ContactForm = () => {
         console.log(error.text);
       }
     );
+
+    // Clear the form inputs
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -59,6 +71,7 @@ const ContactForm = () => {
             label="First Name"
             variant="outlined"
             fullWidth
+            required
             margin="normal"
             value={firstName}
             color="primary"
@@ -75,6 +88,7 @@ const ContactForm = () => {
             label="Last Name"
             variant="outlined"
             fullWidth
+            required
             margin="normal"
             value={lastName}
             color="primary"
@@ -109,6 +123,7 @@ const ContactForm = () => {
             variant="outlined"
             fullWidth
             multiline
+            required
             rows={4}
             margin="normal"
             value={message}

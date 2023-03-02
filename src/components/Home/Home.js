@@ -131,7 +131,7 @@ const Home = () => {
           }}
         />
 
-        <Fade delay="150">
+        <Fade delay="100">
           <Typography variant="h6" sx={{ marginBottom: "20px" }}>
             New Album{" "}
             <a
