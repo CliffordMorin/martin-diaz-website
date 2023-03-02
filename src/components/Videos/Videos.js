@@ -1,14 +1,26 @@
 import makeStyles from "./styles";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Divider } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
+import useTheme from "@mui/material/styles/useTheme";
 
 const Videos = () => {
   const classes = makeStyles();
+  const theme = useTheme();
   return (
-    <Container sx={{ mt: 5 }}>
-      <Typography align="center" variant="h2" sx={{ mt: 5, mb: 5 }}>
+    <Container>
+      <Typography align="center" variant="h2" sx={{ pt: 5, pb: 2 }}>
         <Bounce>VIDEOS</Bounce>
       </Typography>
+      <Divider
+        sx={{
+          zIndex: "100",
+          backgroundColor: theme.palette.text.primary,
+          height: "2px",
+          width: "100px",
+          margin: "auto",
+          mb: 5,
+        }}
+      />
       <Container align="center" className={classes.video}>
         <iframe
           width="560"

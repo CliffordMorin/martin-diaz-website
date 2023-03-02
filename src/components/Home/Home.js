@@ -90,12 +90,13 @@ const Home = () => {
             variant="h1"
             sx={{
               display: "inline",
+
               [theme.breakpoints.down("sm")]: {
                 pb: 10,
               },
             }}
           >
-            MARTIN
+            <b>MARTIN</b>
             <Typography
               variant="h1"
               component="span"

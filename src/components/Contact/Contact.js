@@ -28,6 +28,7 @@ const Contact = () => {
             CONTACT
           </Typography>
         </Fade>
+
         <Container align="center" sx={{ mt: 5 }}>
           <Paper
             elevation={16}

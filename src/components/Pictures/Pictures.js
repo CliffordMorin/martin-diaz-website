@@ -7,8 +7,9 @@ import martin5 from "../../images/martin5.jpg";
 import martin6 from "../../images/martin6.jpg";
 import martin7 from "../../images/martin7.jpg";
 import martin8 from "../../images/martin8.jpg";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Divider } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
+import useTheme from "@mui/material/styles/useTheme";
 
 import "./Pictures.css";
 
@@ -44,11 +45,22 @@ const images = [
 ];
 
 const Pictures = () => {
+  const theme = useTheme();
   return (
     <div>
-      <Typography align="center" variant="h2" sx={{ mt: 5 }}>
+      <Typography align="center" variant="h2" sx={{ pt: 5, pb: 2 }}>
         <Bounce>PICTURES</Bounce>
       </Typography>
+      <Divider
+        sx={{
+          zIndex: "100",
+          backgroundColor: theme.palette.text.primary,
+          height: "2px",
+          width: "100px",
+          margin: "auto",
+          mb: 5,
+        }}
+      />
       <Container sx={{ mt: 5 }}>
         <ImageGallery items={images} lazyLoad={true} />
       </Container>

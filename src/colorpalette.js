@@ -21,6 +21,7 @@ let theme = createTheme({
   palette: {
     text: {
       primary: colorPalette.timberWolf,
+      default: colorPalette.timberWolf,
     },
     primary: {
       main: colorPalette.cafeNoir2,
@@ -47,7 +48,7 @@ let theme = createTheme({
       fontFamily: fonts.body2,
     },
     h4: {
-      fontFamily: fonts.body3,
+      fontFamily: fonts.header2,
     },
     h3: {
       fontFamily: fonts.header2,

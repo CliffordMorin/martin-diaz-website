@@ -1,22 +1,34 @@
 import React from "react";
 
-import { Container, Grow, Typography, Grid } from "@mui/material";
+import { Container, Grow, Typography, Grid, Divider } from "@mui/material";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
 import band from "../../images/compressed/Album-pics/band.jpg";
+import useTheme from "@mui/material/styles/useTheme";
 
 const Discography = () => {
   const classes = makeStyles();
+  const theme = useTheme();
   return (
     <div>
       <Grow in>
         <Container maxWidth="xl" style={{ backgroundColor: "#040404" }}>
-          <Typography variant="h2" align="center" py={5} gutterBottom>
+          <Typography variant="h2" align="center" pt={5} gutterBottom>
             <Bounce>DISCOGRAPHY</Bounce>
           </Typography>
+          <Divider
+            sx={{
+              zIndex: "100",
+              backgroundColor: theme.palette.text.primary,
+              height: "2px",
+              width: "100px",
+              margin: "auto",
+              mb: 5,
+            }}
+          />
           <Grid
             container
             rowSpacing={2}

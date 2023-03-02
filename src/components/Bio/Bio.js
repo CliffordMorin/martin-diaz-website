@@ -6,6 +6,7 @@ import {
   Typography,
   Grid,
   useMediaQuery,
+  Divider,
 } from "@mui/material";
 
 import { Bounce } from "react-awesome-reveal";
@@ -25,6 +26,16 @@ const Bio = () => {
           <Typography variant="h2" align="center" pt={5} gutterBottom>
             <Bounce>BIOGRAPHY</Bounce>
           </Typography>
+          <Divider
+            sx={{
+              zIndex: "100",
+              backgroundColor: theme.palette.text.primary,
+              height: "2px",
+              width: "100px",
+              margin: "auto",
+              mb: 5,
+            }}
+          />
           <Grid
             container
             rowSpacing={2}

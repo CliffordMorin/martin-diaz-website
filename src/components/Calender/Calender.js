@@ -1,11 +1,13 @@
 import { React } from "react";
 import { Typography, Container, Grid, Paper, Divider } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
+import useTheme from "@mui/material/styles/useTheme";
 
-let ids = Array.from({ length: 10 }, (_, i) => i + 1);
+let ids = Array.from({ length: 15 }, (_, i) => i + 1);
 let band = [
   "Philip Lassiter",
   "Philip Lassiter",
+  "Ton Felices Quartet",
   "NJJO last concert",
   "The Dam Jawn feat. Dick Oatts",
   "The Dam Jawn feat. Dick Oatts",
@@ -14,10 +16,15 @@ let band = [
   "The Dam Jawn feat. Dick Oatts",
   "The Dam Jawn feat. Dick Oatts",
   "The Dam Jawn feat. Dick Oatts",
+  "Ernesto Montenegro & Martin Diaz quintet",
+  "Oscar Ployart and friends",
+  "Martin Diaz plays Charlie Parker with Strings feat. Arts Simfònica Jove",
+  "Martin Diaz plays Charlie Parker with Strings feat. Arts Simfònica Jove",
 ];
 let date = [
   "Saturday, February 25, 2023 @ 15:00pm",
   "Thursday, March 23, 2023 @ TBA",
+  "Friday, March 24, 2023 @ TBA",
   "Monday, April 17, 2023 @ TBA",
   "Saturday, May 13, 2023 @ TBA",
   "Sunday, May 14, 2023 @ TBA",
@@ -26,10 +33,15 @@ let date = [
   "Friday, May 19 2023 @ TBA",
   "Saturday, May 20, 2023 @ TBA",
   "Saturday, May 21, 2023 @ TBA",
+  "Thursday, June 15, 2023 @ TBA",
+  "Thursday, July 27, 2023 @ TBA",
+  "Saturday, July 29, 2023 @ TBA",
+  "Friday, August 4, 2023 @ TBA",
 ];
 let location = [
   "S’Hertogenbosch (Live Soul Festival)",
   "Germany",
+  "Jazz Cafe Alto (Amsterdam)",
   "Cinetol (Amsterdam)",
   "Venue (Rotterdam) ",
   "Fizi Theatre (Zierikzee)",
@@ -38,9 +50,14 @@ let location = [
   "Jamboree (Barcelona)",
   "La Mar de Jazz (Cambrils)",
   "Ultramar (L’Escala)",
+  "The WolfHound (Haarlem)",
+  "Robadors23 (Barcelona)",
+  "Jamboree (Barcelona)",
+  "Nits de Jazz (Platja d’Aro)",
 ];
 
 const Calender = () => {
+  const theme = useTheme();
   let events = ids.map((id, i) => {
     return {
       id,
@@ -52,9 +69,19 @@ const Calender = () => {
 
   return (
     <div>
-      <Typography variant="h2" align="center" sx={{ mt: 5 }}>
+      <Typography variant="h2" align="center" sx={{ pt: 5, pb: 2 }}>
         <Bounce>UPCOMING SHOWS</Bounce>
       </Typography>
+      <Divider
+        sx={{
+          zIndex: "100",
+          backgroundColor: theme.palette.text.primary,
+          height: "2px",
+          width: "100px",
+          margin: "auto",
+          mb: 5,
+        }}
+      />
       <Container sx={{ mt: 7 }}>
         <Paper elevation={16}>
           <Grid container spacing={{ xs: 2, md: 3 }} sx={{ pb: 2, pl: 5 }}>

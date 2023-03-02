@@ -37,7 +37,7 @@ const Nav = () => {
         <Toolbar disableGutters>
           <Link to="/" style={{ textDecoration: "none", color: "unset" }}>
             <Typography
-              variant="h3"
+              variant="h4"
               noWrap
               component="div"
               sx={{
@@ -45,7 +45,7 @@ const Nav = () => {
                 display: { xs: "none", md: "flex" },
               }}
             >
-              <strong>MARTIN</strong>
+              <b style={{ color: theme.palette.text.primary }}>MARTIN</b>
               <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
             </Typography>
           </Link>
@@ -62,11 +62,11 @@ const Nav = () => {
               noWrap
               component="div"
               sx={{
-                ml: 4,
+                ml: 6,
                 display: { xs: "flex", md: "none" },
               }}
             >
-              <strong>MARTIN</strong>
+              <b style={{ color: theme.palette.text.primary }}>MARTIN</b>
               <span style={{ color: theme.palette.secondary.main }}>DIAZ</span>
             </Typography>
           </Link>
