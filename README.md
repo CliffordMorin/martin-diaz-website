@@ -24,7 +24,7 @@ This application is a functional professional musician website I built for a cli
 ## User Story
 
 ```
-As a professional musician I want to view a slick, mobile first musician website where I can view my info such as Biography, teaching info/rates, media(such as videos, photos, and recordings), and contact information.
+As a professional musician I want to view a slick, mobile first musician website where I can view my info such as Biography, Discography, downloadable EPK, media(such as videos, photos, and EPK), a schedule and contact information.
 ```
 
 ## Table of Contents
@@ -47,8 +47,8 @@ As a professional musician I want to view a slick, mobile first musician website
 
 ## Links
 
-- Netlify demo site link: (https://www.glenndongifford.com/)
-- Github Repository URL: (https://github.com/CliffordMorin/Glenn-Gifford-Website)
+- Netlify demo site link: (https://www.martindiazmusic.com)
+- Github Repository URL: (https://github.com/CliffordMorin/Martin-Diaz-Website)
 
 ## Technologies Used
 
