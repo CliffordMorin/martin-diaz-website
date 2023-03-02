@@ -7,7 +7,7 @@ const Videos = () => {
   return (
     <Container sx={{ mt: 5 }}>
       <Typography align="center" variant="h2" sx={{ mt: 5, mb: 5 }}>
-        <Bounce>Videos</Bounce>
+        <Bounce>VIDEOS</Bounce>
       </Typography>
       <Container align="center" className={classes.video}>
         <iframe

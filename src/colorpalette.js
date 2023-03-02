@@ -8,6 +8,15 @@ const colorPalette = {
   "--buff": "#dea284ff",
 };
 
+let fonts = {
+  header1: "Cantarell, serif",
+  header2: "Bodoni Moda, serif",
+  header3: "Montserrat Subrayada, serif",
+  body1: "PT Sans Narrow, sans-serif",
+  body2: "Labrada, serif",
+  body3: "Montserrat, serif",
+};
+
 let theme = createTheme({
   palette: {
     text: {
@@ -26,28 +35,28 @@ let theme = createTheme({
   },
   typography: {
     h8: {
-      fontFamily: ["Montserrat", "serif"].join(","),
+      fontFamily: fonts.body1,
     },
     h7: {
-      fontFamily: ["Montserrat", "serif"].join(","),
+      fontFamily: fonts.body1,
     },
     h6: {
-      fontFamily: ["Montserrat", "serif"].join(","),
+      fontFamily: fonts.body1,
     },
     h5: {
-      fontFamily: ["Montserrat", "serif"].join(","),
+      fontFamily: fonts.body2,
     },
     h4: {
-      fontFamily: ["Merriweather", "serif"].join(","),
+      fontFamily: fonts.body3,
     },
     h3: {
-      fontFamily: ["Poppins", "serif"].join(","),
+      fontFamily: fonts.header2,
     },
     h2: {
-      fontFamily: ["Poppins", "serif"].join(","),
+      fontFamily: fonts.header2,
     },
     h1: {
-      fontFamily: ["Montserrat Subrayada", "serif"].join(","),
+      fontFamily: fonts.header2,
     },
   },
 });

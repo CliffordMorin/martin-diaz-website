@@ -53,7 +53,7 @@ const Calender = () => {
   return (
     <div>
       <Typography variant="h2" align="center" sx={{ mt: 5 }}>
-        <Bounce>Upcoming Shows</Bounce>
+        <Bounce>UPCOMING SHOWS</Bounce>
       </Typography>
       <Container sx={{ mt: 7 }}>
         <Paper elevation={16}>

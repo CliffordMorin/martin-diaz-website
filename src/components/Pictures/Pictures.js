@@ -47,7 +47,7 @@ const Pictures = () => {
   return (
     <div>
       <Typography align="center" variant="h2" sx={{ mt: 5 }}>
-        <Bounce>Pictures</Bounce>
+        <Bounce>PICTURES</Bounce>
       </Typography>
       <Container sx={{ mt: 5 }}>
         <ImageGallery items={images} lazyLoad={true} />

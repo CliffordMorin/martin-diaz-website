@@ -56,7 +56,7 @@ const NavTabsDesktop = () => {
                 }}
                 key={item.id}
               >
-                <Typography variant="h7">{item.page}</Typography>
+                <Typography variant="h6">{item.page}</Typography>
               </Button>
               {item.page === "About" && (
                 <Menu
@@ -140,7 +140,7 @@ const NavTabsDesktop = () => {
                   display: "block",
                 }}
               >
-                <Typography variant="h7">{item.page}</Typography>
+                <Typography variant="h6">{item.page}</Typography>
               </Button>
             </Link>
           );

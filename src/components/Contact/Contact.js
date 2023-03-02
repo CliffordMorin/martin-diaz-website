@@ -19,14 +19,13 @@ const Contact = () => {
               mr: 45,
               [theme.breakpoints.down("sm")]: {
                 mr: 0,
-                pt: 1,
-                fontSize: 60,
+                pt: 4,
               },
             }}
-            variant="h2"
+            variant="h3"
             align="center"
           >
-            Contact
+            CONTACT
           </Typography>
         </Fade>
         <Container align="center" sx={{ mt: 5 }}>
@@ -40,7 +39,7 @@ const Contact = () => {
               [theme.breakpoints.down("sm")]: {
                 backgroundColor: alpha(theme.palette.secondary.main, 0.8),
                 mr: 0,
-                mt: 30,
+                mt: 5,
                 px: 1,
                 py: 1,
               },

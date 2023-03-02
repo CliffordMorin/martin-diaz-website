@@ -43,7 +43,6 @@ const Nav = () => {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "Montserrat Subrayada",
               }}
             >
               <strong>MARTIN</strong>
@@ -59,13 +58,12 @@ const Nav = () => {
             }}
           >
             <Typography
-              variant="h4"
+              variant="h3"
               noWrap
               component="div"
               sx={{
-                ml: 8,
+                ml: 4,
                 display: { xs: "flex", md: "none" },
-                fontFamily: "Montserrat Subrayada",
               }}
             >
               <strong>MARTIN</strong>
