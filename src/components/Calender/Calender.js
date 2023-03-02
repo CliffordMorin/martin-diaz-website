@@ -59,14 +59,14 @@ const Calender = () => {
         <Paper elevation={16}>
           <Grid container spacing={{ xs: 2, md: 3 }} sx={{ pb: 2, pl: 5 }}>
             <Grid item xs={6} sm={6} md={4}>
-              <Typography variant="h5"> Event </Typography>
+              <Typography variant="h4"> Event </Typography>
             </Grid>
             <Grid item xs={6} sm={6} md={4}>
-              <Typography variant="h5"> Date </Typography>
+              <Typography variant="h4"> Date </Typography>
             </Grid>
             <Grid item xs={6} sm={6} md={4}>
               <Typography
-                variant="h5"
+                variant="h4"
                 sx={{ display: { xs: "none", sm: "none", md: "block" } }}
               >
                 {" "}
@@ -94,13 +94,13 @@ const Calender = () => {
                   style={lineThrough}
                 >
                   <Grid item xs={6} sm={6} md={4}>
-                    <Typography variant="h8">{i.band}</Typography>
+                    <Typography variant="h6">{i.band}</Typography>
                   </Grid>
                   <Grid item xs={6} sm={6} md={4}>
-                    <Typography variant="h8">{i.date}</Typography>
+                    <Typography variant="h6">{i.date}</Typography>
                   </Grid>
                   <Grid item xs={6} sm={6} md={4}>
-                    <Typography variant="h8">{i.location}</Typography>
+                    <Typography variant="h6">{i.location}</Typography>
                   </Grid>
                 </Grid>
                 <Divider
