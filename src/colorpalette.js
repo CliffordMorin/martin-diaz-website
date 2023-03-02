@@ -1,11 +1,11 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const colorPalette = {
-  "--caf-noir": "#583923ff",
-  "--licorice": "#160d09ff",
-  "--timberwolf": "#d8cdcfff",
-  "--caf-noir-2": "#49301dff",
-  "--buff": "#dea284ff",
+  cafeNoir: "#583923ff",
+  licorice: "#160d09ff",
+  timberWolf: "#d8cdcfff",
+  cafeNoir2: "#49301dff",
+  buff: "#dea284ff",
 };
 
 let fonts = {
@@ -20,17 +20,17 @@ let fonts = {
 let theme = createTheme({
   palette: {
     text: {
-      primary: colorPalette["--timberwolf"],
+      primary: colorPalette.timberWolf,
     },
     primary: {
-      main: colorPalette["--caf-noir-2"],
+      main: colorPalette.cafeNoir2,
     },
     secondary: {
-      main: colorPalette["--buff"],
+      main: colorPalette.buff,
     },
     background: {
-      paper: colorPalette["--licorice"],
-      default: colorPalette["--caf-noir"],
+      paper: colorPalette.licorice,
+      default: colorPalette.cafeNoir,
     },
   },
   typography: {
