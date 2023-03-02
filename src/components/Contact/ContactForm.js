@@ -14,7 +14,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const theme = useTheme();
-  const form = useRef();
+  const formRef = useRef();
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -37,12 +37,13 @@ const ContactForm = () => {
     }
 
     // If all required fields are filled, submit the form
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID).then(
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, USER_ID).then(
       (result) => {
         toast.success(
-          "Message sent successfully! Thank you, we will get back to you as soon as possible!",
+          "Thank you for your inquiry, we will get back to you as soon as possible!",
           { theme: "colored", position: "bottom-left" }
         );
+        console.log(formRef.current);
         console.log(result.text);
       },
       (error) => {
@@ -62,7 +63,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
+    <form ref={formRef} onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
       <ToastContainer />
       <Grid container spacing={2}>
         <Grid item xs={6}>
@@ -73,6 +74,7 @@ const ContactForm = () => {
             fullWidth
             required
             margin="normal"
+            name="firstName"
             value={firstName}
             color="primary"
             InputProps={{
@@ -90,6 +92,7 @@ const ContactForm = () => {
             fullWidth
             required
             margin="normal"
+            name="lastName"
             value={lastName}
             color="primary"
             InputProps={{
@@ -107,6 +110,7 @@ const ContactForm = () => {
             fullWidth
             required
             margin="normal"
+            name="email"
             value={email}
             color="primary"
             InputProps={{
@@ -127,6 +131,7 @@ const ContactForm = () => {
             rows={4}
             margin="normal"
             value={message}
+            name="message"
             color="primary"
             InputProps={{
               style: { color: theme.palette.primary.main },
