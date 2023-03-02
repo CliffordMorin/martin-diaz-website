@@ -43,7 +43,6 @@ const ContactForm = () => {
           "Thank you for your inquiry, we will get back to you as soon as possible!",
           { theme: "colored", position: "bottom-left" }
         );
-        console.log(formRef.current);
         console.log(result.text);
       },
       (error) => {

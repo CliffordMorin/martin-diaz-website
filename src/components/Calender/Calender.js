@@ -17,15 +17,15 @@ let band = [
 ];
 let date = [
   "Saturday, February 25, 2023 @ 15:00pm",
-  "Thursday, March 23, 2023 @ 20:00pm",
-  "Monday, April 17, 2023 @ 20:00pm",
-  "Saturday, May 13, 2023 @ 20:00pm",
-  "Sunday, May 14, 2023 @ 20:00pm",
-  "Wednesday, May 17, 2023 @ 20:00pm",
-  "Thursday, May 18, 2023 @ 20:00pm",
-  "Friday, May 19 2023 @ 20:00pm",
-  "Saturday, May 20, 2023 @ 20:00pm",
-  "Saturday, May 21, 2023 @ 20:00pm",
+  "Thursday, March 23, 2023 @ TBA",
+  "Monday, April 17, 2023 @ TBA",
+  "Saturday, May 13, 2023 @ TBA",
+  "Sunday, May 14, 2023 @ TBA",
+  "Wednesday, May 17, 2023 @ TBA",
+  "Thursday, May 18, 2023 @ TBA",
+  "Friday, May 19 2023 @ TBA",
+  "Saturday, May 20, 2023 @ TBA",
+  "Saturday, May 21, 2023 @ TBA",
 ];
 let location = [
   "S’Hertogenbosch (Live Soul Festival)",
