@@ -5,7 +5,7 @@ const navLinksDesktop = [
     id: 1,
     children: [
       { page: "BIO", link: "/bio", id: 2 },
-      { page: "DISCOGRPAHY", link: "/discography", id: 3 },
+      { page: "DISCOGRAPHY", link: "/discography", id: 3 },
     ],
   },
   {

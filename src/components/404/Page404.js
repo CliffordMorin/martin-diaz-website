@@ -22,7 +22,7 @@ const Page404 = () => {
             variant="h3"
             href="/"
           >
-            <Button color="warning" variant="contained" size="large">
+            <Button variant="contained" size="large">
               Go Home
             </Button>
           </Link>
