@@ -10,6 +10,7 @@ import martin8 from "../../images/martin8.jpg";
 import { Container, Typography, Divider } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
 import useTheme from "@mui/material/styles/useTheme";
+import { Helmet } from "react-helmet-async";
 
 import "./Pictures.css";
 
@@ -48,6 +49,11 @@ const Pictures = () => {
   const theme = useTheme();
   return (
     <div>
+      <Helmet>
+        <title>Martin Diaz | Pictures</title>
+        <meta name="description" content="Pictures of Martin Diaz" />
+        <link rel="canonical" href="/pictures" />
+      </Helmet>
       <Typography align="center" variant="h2" sx={{ pt: 5, pb: 2 }}>
         <Bounce>PICTURES</Bounce>
       </Typography>

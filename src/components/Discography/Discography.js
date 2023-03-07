@@ -8,12 +8,21 @@ import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
 import band from "../../images/compressed/Album-pics/band.jpg";
 import useTheme from "@mui/material/styles/useTheme";
+import { Helmet } from "react-helmet-async";
 
 const Discography = () => {
   const classes = makeStyles();
   const theme = useTheme();
   return (
     <div>
+      <Helmet>
+        <title>Martin Diaz | Discography</title>
+        <meta
+          name="description"
+          content="Martin Diaz's Discography containing martin's most recent projects and records that martin has recorded on."
+        />
+        <link rel="canonical" href="/discography" />
+      </Helmet>
       <Grow in>
         <Container maxWidth="xl" style={{ backgroundColor: "#040404" }}>
           <Typography variant="h2" align="center" pt={5} gutterBottom>

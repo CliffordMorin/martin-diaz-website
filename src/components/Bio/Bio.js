@@ -14,6 +14,7 @@ import makeStyles from "./styles";
 import martin6 from "../../images/martin6.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { Helmet } from "react-helmet-async";
 
 const Bio = () => {
   const classes = makeStyles();
@@ -21,6 +22,16 @@ const Bio = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <div>
+      <Helmet>
+        <title>Martin Diaz | Biography</title>
+        <meta
+          name="description"
+          content="The Catalan saxophonist and composer Martín Díaz is at the
+                forefront of his generation of jazz musicians. Residing in
+                Amsterdam he leads Martin Diaz Quintet project."
+        />
+        <link rel="canonical" href="/bio" />
+      </Helmet>
       <Grow in>
         <Container maxWidth="xl" style={{ backgroundColor: "#040404" }}>
           <Typography variant="h2" align="center" pt={5} gutterBottom>

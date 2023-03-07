@@ -2,12 +2,18 @@ import makeStyles from "./styles";
 import { Container, Typography, Divider } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
 import useTheme from "@mui/material/styles/useTheme";
+import { Helmet } from "react-helmet-async";
 
 const Videos = () => {
   const classes = makeStyles();
   const theme = useTheme();
   return (
     <Container>
+      <Helmet>
+        <title>Martin Diaz | Videos</title>
+        <meta name="description" content="Videos of Martin Diaz" />
+        <link rel="canonical" href="/videos" />
+      </Helmet>
       <Typography align="center" variant="h2" sx={{ pt: 5, pb: 2 }}>
         <Bounce>VIDEOS</Bounce>
       </Typography>

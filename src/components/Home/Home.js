@@ -13,6 +13,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import useTheme from "@mui/material/styles/useTheme";
 import { Fade } from "react-awesome-reveal";
 import makeStyles from "./styles";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const theme = useTheme();
@@ -45,6 +46,11 @@ const Home = () => {
       }}
       maxWidth={isSmallScreen ? "sm" : "xl"}
     >
+      <Helmet>
+        <title>Martin Diaz | Home</title>
+        <meta name="description" content="Martin Diaz's Home Page" />
+        <link rel="canonical" href="/" />
+      </Helmet>
       <Snackbar
         open={open}
         autoHideDuration={6000}
@@ -90,7 +96,6 @@ const Home = () => {
             variant="h1"
             sx={{
               display: "inline",
-
               [theme.breakpoints.down("sm")]: {
                 pb: 10,
               },

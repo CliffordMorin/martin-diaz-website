@@ -2,6 +2,7 @@ import { React } from "react";
 import { Typography, Container, Grid, Paper, Divider } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
 import useTheme from "@mui/material/styles/useTheme";
+import { Helmet } from "react-helmet-async";
 
 let ids = Array.from({ length: 15 }, (_, i) => i + 1);
 let band = [
@@ -69,6 +70,14 @@ const Calender = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Martin Diaz | Calender</title>
+        <meta
+          name="description"
+          content="Martin Diaz Calender with dates of upcoming shows, concerts and public events."
+        />
+        <link rel="canonical" href="/calender" />
+      </Helmet>
       <Typography variant="h2" align="center" sx={{ pt: 5, pb: 2 }}>
         <Bounce>UPCOMING SHOWS</Bounce>
       </Typography>
