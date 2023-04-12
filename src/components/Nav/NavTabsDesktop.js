@@ -80,7 +80,6 @@ const NavTabsDesktop = () => {
                     >
                       <MenuItem
                         onClick={handleAboutMenuClose}
-                        key={childItem.id}
                         className={classes.navLinkText}
                       >
                         {childItem.page}
@@ -112,7 +111,6 @@ const NavTabsDesktop = () => {
                       >
                         <MenuItem
                           onClick={handleAboutMenuClose}
-                          key={childItem.id}
                           className={classes.navLinkText}
                         >
                           {childItem.page}
@@ -130,7 +128,6 @@ const NavTabsDesktop = () => {
                       >
                         <MenuItem
                           onClick={handleAboutMenuClose}
-                          key={childItem.id}
                           className={classes.navLinkText}
                         >
                           {childItem.page}
@@ -155,13 +152,8 @@ const NavTabsDesktop = () => {
                   color: "white",
                   display: "block",
                 }}
-                key={item.id}
               >
-                <Typography
-                  className={classes.navLinkText}
-                  variant="h6"
-                  key={item.id}
-                >
+                <Typography className={classes.navLinkText} variant="h6">
                   {item.page}
                 </Typography>
               </Button>

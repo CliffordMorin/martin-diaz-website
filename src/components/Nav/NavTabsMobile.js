@@ -134,8 +134,6 @@ const NavTabsDesktop = () => {
                             handleAboutMenuClose();
                             handleMenuClose();
                           }}
-                          key={childItem.id}
-                          className={classes.navLinkText}
                         >
                           {childItem.page}
                         </MenuItem>
@@ -179,8 +177,6 @@ const NavTabsDesktop = () => {
                               handleMediaMenuClose();
                               handleMenuClose();
                             }}
-                            key={childItem.id}
-                            className={classes.navLinkText}
                           >
                             {childItem.page}
                           </MenuItem>
@@ -200,8 +196,6 @@ const NavTabsDesktop = () => {
                               handleMediaMenuClose();
                               handleMenuClose();
                             }}
-                            key={childItem.id}
-                            className={classes.navLinkText}
                           >
                             {childItem.page}
                           </MenuItem>
@@ -226,7 +220,6 @@ const NavTabsDesktop = () => {
                     display: "block",
                   }}
                   onClick={handleMenuClose}
-                  key={item.id}
                 >
                   <Typography className={classes.navLinkText} variant="h7">
                     {item.page}
