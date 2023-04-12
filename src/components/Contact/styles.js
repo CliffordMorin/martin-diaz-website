@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
-import martin1 from "../../images/compressed/martin1.png";
-import martin4 from "../../images/martin4.jpg";
+import martin1 from "../../images/compressed/martin1.jpg";
+import martin4 from "../../images/compressed/martin4.jpg";
 
 export default makeStyles((theme) => ({
   container: {

@@ -11,7 +11,7 @@ import {
 
 import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
-import martin6 from "../../images/martin6.jpg";
+import martin6 from "../../images/compressed/martin6.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Helmet } from "react-helmet-async";

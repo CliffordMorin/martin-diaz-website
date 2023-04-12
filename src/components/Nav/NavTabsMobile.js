@@ -10,6 +10,7 @@ import {
   IconButton,
 } from "@mui/material";
 import navLinks from "./navLinks";
+import useStyles from "./styles";
 
 const NavTabsDesktop = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -17,6 +18,7 @@ const NavTabsDesktop = () => {
   const [mediaMenuOpen, setMediaMenuOpen] = useState(false);
   const aboutRef = useRef(null);
   const mediaRef = useRef(null);
+  const classes = useStyles();
 
   const handleAboutMenuOpen = () => {
     setAboutMenuOpen(true);
@@ -95,7 +97,9 @@ const NavTabsDesktop = () => {
                     }
                   }}
                 >
-                  <Typography variant="h7">{item.page}</Typography>
+                  <Typography className={classes.navLinkText} variant="h7">
+                    {item.page}
+                  </Typography>
                 </Button>
                 {item.page === "About" && (
                   <Menu
@@ -131,6 +135,7 @@ const NavTabsDesktop = () => {
                             handleMenuClose();
                           }}
                           key={childItem.id}
+                          className={classes.navLinkText}
                         >
                           {childItem.page}
                         </MenuItem>
@@ -175,6 +180,7 @@ const NavTabsDesktop = () => {
                               handleMenuClose();
                             }}
                             key={childItem.id}
+                            className={classes.navLinkText}
                           >
                             {childItem.page}
                           </MenuItem>
@@ -195,6 +201,7 @@ const NavTabsDesktop = () => {
                               handleMenuClose();
                             }}
                             key={childItem.id}
+                            className={classes.navLinkText}
                           >
                             {childItem.page}
                           </MenuItem>
@@ -221,7 +228,9 @@ const NavTabsDesktop = () => {
                   onClick={handleMenuClose}
                   key={item.id}
                 >
-                  <Typography variant="h7">{item.page}</Typography>
+                  <Typography className={classes.navLinkText} variant="h7">
+                    {item.page}
+                  </Typography>
                 </Button>
               </Link>
             );

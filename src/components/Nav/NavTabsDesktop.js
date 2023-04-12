@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 
 import { Button, Typography, Menu, MenuItem, Box } from "@mui/material";
 import navLinks from "./navLinks";
+import makeStyles from "./styles";
 
 const NavTabsDesktop = () => {
   const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
   const [mediaMenuOpen, setMediaMenuOpen] = useState(false);
   const aboutRef = useRef(null);
   const mediaRef = useRef(null);
+  const classes = makeStyles();
 
   const handleAboutMenuOpen = () => {
     setAboutMenuOpen(true);
@@ -55,7 +57,9 @@ const NavTabsDesktop = () => {
                   }
                 }}
               >
-                <Typography variant="h6">{item.page}</Typography>
+                <Typography className={classes.navLinkText} variant="h6">
+                  {item.page}
+                </Typography>
               </Button>
               {item.page === "About" && (
                 <Menu
@@ -77,6 +81,7 @@ const NavTabsDesktop = () => {
                       <MenuItem
                         onClick={handleAboutMenuClose}
                         key={childItem.id}
+                        className={classes.navLinkText}
                       >
                         {childItem.page}
                       </MenuItem>
@@ -108,6 +113,7 @@ const NavTabsDesktop = () => {
                         <MenuItem
                           onClick={handleAboutMenuClose}
                           key={childItem.id}
+                          className={classes.navLinkText}
                         >
                           {childItem.page}
                         </MenuItem>
@@ -125,6 +131,7 @@ const NavTabsDesktop = () => {
                         <MenuItem
                           onClick={handleAboutMenuClose}
                           key={childItem.id}
+                          className={classes.navLinkText}
                         >
                           {childItem.page}
                         </MenuItem>
@@ -150,7 +157,11 @@ const NavTabsDesktop = () => {
                 }}
                 key={item.id}
               >
-                <Typography variant="h6" key={item.id}>
+                <Typography
+                  className={classes.navLinkText}
+                  variant="h6"
+                  key={item.id}
+                >
                   {item.page}
                 </Typography>
               </Button>
