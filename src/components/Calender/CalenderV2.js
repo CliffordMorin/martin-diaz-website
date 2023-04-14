@@ -1,8 +1,9 @@
-import { React } from "react";
-import { Container, Typography, Grid, Paper, Divider } from "@mui/material";
+import { React, useState } from "react";
+import { Container, Typography, Grid, Button, Divider } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
 import useTheme from "@mui/material/styles/useTheme";
 import { Helmet } from "react-helmet-async";
+import { SiBandsintown } from "react-icons/si";
 import EventCard from "./EventCard";
 
 let ids = Array.from({ length: 15 }, (_, i) => i + 1);
@@ -60,15 +61,21 @@ let location = [
 ];
 
 const CalenderV2 = () => {
+  const [visibleEvents, setVisibleEvents] = useState(5);
+
+  const handleLoadMore = () => {
+    setVisibleEvents(visibleEvents + 5);
+  };
+
   const theme = useTheme();
-  let events = ids.map((id, i) => {
-    return {
-      id,
-      band: band[i],
-      date: date[i],
-      location: location[i],
-    };
-  });
+  //   let events = ids.map((id, i) => {
+  //     return {
+  //       id,
+  //       band: band[i],
+  //       date: date[i],
+  //       location: location[i],
+  //     };
+  //   });
 
   let events2 = citys.map((city, i) => {
     return {
@@ -105,11 +112,45 @@ const CalenderV2 = () => {
       />
       <Container sx={{ mt: 7, mb: 7 }}>
         <Grid container spacing={{ xs: 3, md: 3 }}>
-          {events2.map((event) => (
+          {events2?.slice(0, visibleEvents).map((event) => (
             <Grid key={event.id} item xs={12}>
               <EventCard event={event} />
             </Grid>
           ))}
+          {visibleEvents < events2.length && (
+            <Grid
+              item
+              xs={12}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <Button
+                variant="contained"
+                color="secondary"
+                size="large"
+                sx={{ mt: 2 }}
+                onClick={handleLoadMore}
+              >
+                Load More
+              </Button>
+            </Grid>
+          )}
+          <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                mt: 2,
+                backgroundColor: "#00B4B3",
+                color: "background.paper",
+                "&:hover": {
+                  backgroundColor: "#00d9d8",
+                },
+              }}
+            >
+              <SiBandsintown size="1.5em" style={{ marginRight: "25px" }} />
+              Track On Bandsintown
+            </Button>
+          </Grid>
         </Grid>
       </Container>
     </div>
