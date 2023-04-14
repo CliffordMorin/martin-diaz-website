@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import en from "./en.json";
+import es from "./es.json";
+import ca from "./ca.json";
 import useTheme from "@mui/material/styles/useTheme";
 import {
   Container,
@@ -7,6 +10,8 @@ import {
   Grid,
   useMediaQuery,
   Divider,
+  Button,
+  Box,
 } from "@mui/material";
 
 import { Bounce } from "react-awesome-reveal";
@@ -20,6 +25,12 @@ const Bio = () => {
   const classes = makeStyles();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const [language, setLanguage] = useState("en");
+
+  const handleLanguage = (e) => {
+    setLanguage(e.target.value);
+  };
+
   return (
     <div>
       <Helmet>
@@ -35,7 +46,13 @@ const Bio = () => {
       <Grow in>
         <Container maxWidth="xl" style={{ backgroundColor: "#040404" }}>
           <Typography variant="h2" align="center" pt={5} gutterBottom>
-            <Bounce>BIOGRAPHY</Bounce>
+            <Bounce>
+              {language === "en"
+                ? en?.title?.toUpperCase()
+                : language === "ca"
+                ? ca?.title?.toUpperCase()
+                : es?.title?.toUpperCase()}
+            </Bounce>
           </Typography>
           <Divider
             sx={{
@@ -62,6 +79,29 @@ const Bio = () => {
               />
             </Grid>
             <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
+              <Box>
+                <Button
+                  value="en"
+                  onClick={handleLanguage}
+                  className={classes.button}
+                >
+                  English
+                </Button>
+                <Button
+                  value="es"
+                  onClick={handleLanguage}
+                  className={classes.button}
+                >
+                  Spanish
+                </Button>
+                <Button
+                  value="ca"
+                  onClick={handleLanguage}
+                  className={classes.button}
+                >
+                  Catalan
+                </Button>
+              </Box>
               <Typography
                 variant="body1"
                 align="center"
@@ -69,17 +109,11 @@ const Bio = () => {
                 py={isSmallScreen ? 0 : 2}
                 px={2}
               >
-                {" "}
-                The Catalan saxophonist and composer Martín Díaz is at the
-                forefront of his generation of jazz musicians. Residing in
-                Amsterdam he leads his own Martin Diaz Quintet project which won
-                one of the most prestigious awards in the American Jazz scene,
-                Downbeat Award 2020, with a special mention as an outstanding
-                soloist and the first prize of the Leiden Jazz Awards. His first
-                album as a leader Identities, landed signing a contract with the
-                famous Catalan record label Fresh Sound, with which other
-                international artists began their musical careers, such as
-                Ambrose Akimusire, Giulia Valle and others.
+                {language === "en"
+                  ? en?.bio1
+                  : language === "ca"
+                  ? ca?.bio1
+                  : es?.bio1}
               </Typography>
               <Typography
                 variant="body1"
@@ -87,10 +121,11 @@ const Bio = () => {
                 className={classes.text}
                 p={2}
               >
-                {" "}
-                He is also part of the Barcelona Jazz Orchestra, a legendary big
-                band that recorded with Phill Woods, John Fadis and Jesse Davis
-                in New York.
+                {language === "en"
+                  ? en?.bio2
+                  : language === "ca"
+                  ? ca?.bio2
+                  : es?.bio2}
               </Typography>
               <Typography
                 variant="body1"
@@ -98,14 +133,11 @@ const Bio = () => {
                 className={classes.text}
                 p={2}
               >
-                {" "}
-                Martin Diaz joined the Jong Metropole Orchestra for the 2019 and
-                2021 with which he played with international figures such as
-                Michael League and Michelle Davis. He also toured with the NJJO
-                (Nationaal Jeugt Jazz Orkest) as leader of the saxophone
-                section. He continues this tour with the NJJO through the
-                Netherlands, Germany and in November through Indonesia
-                participating in major Jazz festivals in Jakarta and Yogyakarta.
+                {language === "en"
+                  ? en?.bio3
+                  : language === "ca"
+                  ? ca?.bio3
+                  : es?.bio3}
               </Typography>
               <Typography
                 variant="body1"
@@ -113,12 +145,11 @@ const Bio = () => {
                 className={classes.text}
                 p={2}
               >
-                {" "}
-                At the age of 26, he has recorded eight albums and played all
-                over the peninsula, and now he is beginning to leave his print
-                in the Netherlands, where he has already recorded and played
-                with the best musicians of the country, such as Gideon Tazelaar,
-                Ben Van Gelder, Jasper Blom, Benjamin Herman and Simon Rigter.
+                {language === "en"
+                  ? en?.bio4
+                  : language === "ca"
+                  ? ca?.bio4
+                  : es?.bio4}
               </Typography>
               <Typography
                 variant="body1"
@@ -126,13 +157,11 @@ const Bio = () => {
                 className={classes.text}
                 p={2}
               >
-                {" "}
-                During the 2020 pandemic lockdown he developed Parker For All, a
-                series of videos that he shot in his apartment in Amsterdam
-                dedicated to the music of Charlie Parker. These episodes, which
-                are starting to take hold in the Amsterdam atmosphere, receive a
-                guest from the Dutch Jazz scene every time and have been
-                attended by great jazz musicians.
+                {language === "en"
+                  ? en?.bio5
+                  : language === "ca"
+                  ? ca?.bio5
+                  : es?.bio5}
               </Typography>
               <Typography
                 variant="body1"
@@ -140,12 +169,11 @@ const Bio = () => {
                 className={classes.text}
                 p={2}
               >
-                {" "}
-                His last project the Dam Jawn arises from his stay in
-                Philadelphia and New York for half a year where he received
-                classes from the best figures in the world jazz scene, such as
-                Joe Magnarelli, David Wong, Dick Oatts, Tim Warfield and Terell
-                Stafford.
+                {language === "en"
+                  ? en?.bio6
+                  : language === "ca"
+                  ? ca?.bio6
+                  : es?.bio6}
               </Typography>
               <Typography
                 variant="body1"
@@ -153,10 +181,11 @@ const Bio = () => {
                 className={classes.text}
                 p={2}
               >
-                {" "}
-                The Dam Jawn recorded an album named Master St. with the
-                legendary Dick Oatts. It will be released soon in 2023 with a
-                very renowned Dutch recording label.
+                {language === "en"
+                  ? en?.bio7
+                  : language === "ca"
+                  ? ca?.bio7
+                  : es?.bio7}
               </Typography>
               <Typography
                 variant="body1"
@@ -164,14 +193,11 @@ const Bio = () => {
                 className={classes.text}
                 p={2}
               >
-                {" "}
-                In his last year he has also toured the Netherlands and
-                Catalonia with a unique project featuring two important Dutch
-                jazz figures such as Jasper Blom and Benjamin Herman. They
-                presented their program in venues such as the Bimhuis in
-                Amsterdam and at renowned festivals in Catalonia such as Nits de
-                Jazz in Platja d'Aro, the Mas i Mas del Jamboree festival and at
-                the Jazz Cava in Vic
+                {language === "en"
+                  ? en?.bio8
+                  : language === "ca"
+                  ? ca?.bio8
+                  : es?.bio8}
               </Typography>
               <Typography
                 variant="body1"
@@ -179,14 +205,11 @@ const Bio = () => {
                 className={classes.text}
                 p={2}
               >
-                {" "}
-                With all this experience and his love for this music, Martín
-                Díaz transmits to the public that great respect for traditional
-                jazz by applying the language, the sound and the melodies to his
-                own sound. He is able to maintain this essence in his
-                compositions, but always looking for originality and innovation
-                using different rhythmic atmospheres and warm colors in the
-                harmonies.
+                {language === "en"
+                  ? en?.bio9
+                  : language === "ca"
+                  ? ca?.bio9
+                  : es?.bio9}
               </Typography>
             </Grid>
           </Grid>
