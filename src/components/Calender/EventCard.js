@@ -30,17 +30,6 @@ const EventCard = ({ event }) => {
       >
         <Box
           sx={{
-            bgcolor: "secondary.main",
-            borderRadius: 2,
-            px: 1,
-            py: 0.5,
-            mr: 1,
-          }}
-        >
-          <Typography variant="body2">{date}</Typography>
-        </Box>
-        <Box
-          sx={{
             bgcolor: "warning.main",
             borderRadius: 2,
             px: 1,
@@ -48,9 +37,9 @@ const EventCard = ({ event }) => {
             mr: 1,
           }}
         >
-          <Typography variant="body2">{city}</Typography>
+          <Typography variant="body">{city}</Typography>
         </Box>
-        <Typography variant="body2">{location}</Typography>
+        <Typography variant="body">{location}</Typography>
       </Box>
       <Box
         sx={{
@@ -60,7 +49,36 @@ const EventCard = ({ event }) => {
           alignItems: "center",
         }}
       >
-        <Typography variant="h6" sx={{ mr: 2 }}>
+        <Box
+          sx={{
+            bgcolor: "secondary.main",
+            borderRadius: 2,
+            px: 2.5,
+            py: 2,
+            mr: 2,
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Typography variant="h5" color="background.paper">
+            {date.split(" ")[0].toUpperCase()}
+          </Typography>
+          <Typography variant="body1" color="background.paper">
+            {date.split(" ")[1]}
+          </Typography>
+        </Box>
+        <Typography
+          variant="h5"
+          sx={{
+            mr: 2,
+            "@media (max-width:600px)": {
+              fontSize: "1rem",
+            },
+          }}
+        >
           {band}
         </Typography>
         <Button variant="contained" color="secondary" size="medium">

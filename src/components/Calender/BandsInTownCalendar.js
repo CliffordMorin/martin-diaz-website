@@ -3,7 +3,6 @@ import { Typography, Container, Divider } from "@mui/material";
 import { Bounce } from "react-awesome-reveal";
 import useTheme from "@mui/material/styles/useTheme";
 import { Helmet } from "react-helmet-async";
-import "./styles.css";
 
 const BandsInTownCalendar = () => {
   const theme = useTheme();
