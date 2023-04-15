@@ -17,6 +17,7 @@ import {
 import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
 import martin6 from "../../images/compressed/martin6.jpg";
+import martin6small from "../../images/compressed/martin6small.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Helmet } from "react-helmet-async";
@@ -44,7 +45,7 @@ const Bio = () => {
         <link rel="canonical" href="/bio" />
       </Helmet>
       <Grow in>
-        <Container maxWidth="xl" style={{ backgroundColor: "#040404" }}>
+        <Container maxWidth="xl" sx={{ backgroundColor: "#040404", pb: 7 }}>
           <Typography variant="h2" align="center" pt={5} gutterBottom>
             <Bounce>
               {language === "en"
@@ -73,13 +74,13 @@ const Bio = () => {
             <Grid item xs={12} md={6}>
               <LazyLoadImage
                 className={classes.images}
-                src={martin6}
+                src={isSmallScreen ? martin6small : martin6}
                 effect="blur"
                 alt="martin"
               />
             </Grid>
             <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
-              <Box>
+              <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
                 <Button
                   value="en"
                   onClick={handleLanguage}
