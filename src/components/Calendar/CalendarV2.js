@@ -5,6 +5,7 @@ import useTheme from "@mui/material/styles/useTheme";
 import { Helmet } from "react-helmet-async";
 import { SiBandsintown } from "react-icons/si";
 import EventCard from "./EventCard";
+import EmptyCalendar from "./EmptyCalendar";
 
 let ids = Array.from({ length: 15 }, (_, i) => i + 1);
 let citys = Array.from({ length: 15 }, (_, i) => "Amsterdam, NL");
@@ -60,7 +61,7 @@ let location = [
   "Nits de Jazz (Platja d’Aro)",
 ];
 
-const CalenderV2 = () => {
+const CalendarV2 = () => {
   const [visibleEvents, setVisibleEvents] = useState(5);
 
   const handleLoadMore = () => {
@@ -112,11 +113,15 @@ const CalenderV2 = () => {
       />
       <Container sx={{ mt: 7, mb: 7 }}>
         <Grid container spacing={{ xs: 3, md: 3 }}>
-          {events2?.slice(0, visibleEvents).map((event) => (
-            <Grid key={event.id} item xs={12}>
-              <EventCard event={event} />
-            </Grid>
-          ))}
+          {events2.length > 0 ? (
+            events2?.slice(0, visibleEvents).map((event) => (
+              <Grid key={event.id} item xs={12}>
+                <EventCard event={event} />
+              </Grid>
+            ))
+          ) : (
+            <EmptyCalendar />
+          )}
           {visibleEvents < events2.length && (
             <Grid
               item
@@ -134,6 +139,7 @@ const CalenderV2 = () => {
               </Button>
             </Grid>
           )}
+
           <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
             <Button
               variant="contained"
@@ -157,4 +163,4 @@ const CalenderV2 = () => {
   );
 };
 
-export default CalenderV2;
+export default CalendarV2;
