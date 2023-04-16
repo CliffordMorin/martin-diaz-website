@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet-async";
 import { SiBandsintown } from "react-icons/si";
 import EventCard from "./EventCard";
 import EmptyCalendar from "./EmptyCalendar";
+import LoadingPage from "./LoadingPage";
 
 // let ids = Array.from({ length: 15 }, (_, i) => i + 1);
 // let citys = Array.from({ length: 15 }, (_, i) => "Amsterdam, NL");
@@ -77,7 +78,7 @@ const CalendarV2 = () => {
   const theme = useTheme();
   const [visibleEvents, setVisibleEvents] = useState(5);
   const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const fetchEvents = useCallback(async () => {
@@ -137,7 +138,9 @@ const CalendarV2 = () => {
       />
       <Container sx={{ mt: 7, mb: 7 }}>
         <Grid container spacing={{ xs: 3, md: 3 }}>
-          {events.length > 0 ? (
+          {isLoading ? (
+            <LoadingPage />
+          ) : events.length > 0 ? (
             events?.slice(0, visibleEvents).map((event) => (
               <Grid key={event.id} item xs={12}>
                 <EventCard event={event} />
@@ -163,7 +166,6 @@ const CalendarV2 = () => {
               </Button>
             </Grid>
           )}
-
           <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
             <Link
               href={`https://bandsintown.com/artist-subscribe/${ARTIST_ID}?app_id=${API_KEY}&came_from=267&utm_source=public_api&utm_medium=api&utm_campaign=track`}
