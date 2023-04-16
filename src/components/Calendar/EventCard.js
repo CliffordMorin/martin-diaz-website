@@ -1,7 +1,6 @@
 import { Box, Typography, Button, Link } from "@mui/material";
 
 const EventCard = ({ event }) => {
-  console.log(event);
   const { venue, title, datetime, url } = event;
   const date = new Date(datetime).toLocaleDateString("en-US", {
     month: "long",

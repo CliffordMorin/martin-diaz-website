@@ -71,7 +71,7 @@ import EmptyCalendar from "./EmptyCalendar";
 const API_KEY = process.env.REACT_APP_BANDSINTOWN_API_KEY;
 const ARTIST_ID = "12667113";
 
-const API_URL = `https://rest.bandsintown.com/artists/sza/events?app_id=${API_KEY}&date=upcoming`;
+const API_URL = `https://rest.bandsintown.com/artists/martin%20diaz/events?app_id=${API_KEY}&date=upcoming`;
 
 const CalendarV2 = () => {
   const theme = useTheme();
@@ -115,12 +115,12 @@ const CalendarV2 = () => {
   return (
     <div>
       <Helmet>
-        <title>Martin Diaz | Calender</title>
+        <title>Martin Diaz | Calendar</title>
         <meta
           name="description"
-          content="Martin Diaz Calender with dates of upcoming shows, concerts and public events."
+          content="Martin Diaz Calendar with dates of upcoming shows, concerts and public events."
         />
-        <link rel="canonical" href="/calender" />
+        <link rel="canonical" href="/calendar" />
       </Helmet>
       <Typography variant="h2" align="center" sx={{ pt: 5, pb: 2 }}>
         <Bounce>UPCOMING SHOWS</Bounce>
