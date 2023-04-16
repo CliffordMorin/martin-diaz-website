@@ -21,7 +21,7 @@ const navLinksDesktop = [
       },
     ],
   },
-  { page: "CALENDAR", link: "/calender", id: 8 },
+  { page: "CALENDAR", link: "/calendar", id: 8 },
   { page: "CONTACT", link: "/contact", id: 9 },
 ];
 

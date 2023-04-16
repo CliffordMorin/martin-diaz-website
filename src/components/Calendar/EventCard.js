@@ -1,7 +1,12 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Link } from "@mui/material";
 
 const EventCard = ({ event }) => {
-  const { band, date, location, city } = event;
+  console.log(event);
+  const { venue, title, datetime, url } = event;
+  const date = new Date(datetime).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <Box
@@ -37,9 +42,9 @@ const EventCard = ({ event }) => {
             mr: 1,
           }}
         >
-          <Typography variant="body">{city}</Typography>
+          <Typography variant="body">{venue.location}</Typography>
         </Box>
-        <Typography variant="body">{location}</Typography>
+        <Typography variant="body">{venue.name}</Typography>
       </Box>
       <Box
         sx={{
@@ -79,11 +84,13 @@ const EventCard = ({ event }) => {
             },
           }}
         >
-          {band}
+          {title}
         </Typography>
-        <Button variant="contained" color="secondary" size="medium">
-          RSVP
-        </Button>
+        <Link href={url} target="_blank" rel="noreferrer">
+          <Button variant="contained" color="secondary" size="medium">
+            RSVP
+          </Button>
+        </Link>
       </Box>
     </Box>
   );
