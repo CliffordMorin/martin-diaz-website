@@ -8,9 +8,9 @@ import Contact from "./components/Contact/Contact";
 import Videos from "./components/Videos/Videos";
 import Pictures from "./components/Pictures/Pictures";
 import EPK from "./components/EPK/EPK";
-import Calender from "./components/Calender/Calender";
-// import CalenderV2 from "./components/Calender/CalenderV2";
-// import BandsInTownCalender from "./components/Calender/BandsInTownCalendar";
+// import Calendar from "./components/Calendar/Calendar";
+import CalendarV2 from "./components/Calendar/CalendarV2";
+// import BandsInTownCalender from "./components/Calendar/BandsInTownCalendar";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Page404 from "./components/404/Page404";
@@ -32,9 +32,9 @@ function App() {
           <Route path="/videos" element={<Videos />} />
           <Route path="/pictures" element={<Pictures />} />
           <Route path="/epk" element={<EPK />} />
-          {/* <Route path="/calender" element={<CalenderV2 />} /> */}
-          {/* <Route path="/calender" element={<BandsInTownCalender />} /> */}
-          <Route path="/calender" element={<Calender />} />
+          <Route path="/calendar" element={<CalendarV2 />} />
+          {/* <Route path="/calendar" element={<BandsInTownCalendar />} /> */}
+          {/* <Route path="/calendar" element={<Calendar />} /> */}
           <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />

@@ -12,11 +12,26 @@ export default makeStyles((theme) => ({
       backgroundPosition: "80%",
     },
   },
-  link: {
-    textDecoration: "none",
-    color: theme.palette.secondary.main,
-    cursor: "pointer",
+
+  button: {
+    color: theme.palette.text.primary,
+
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.primary.main,
+      "& $span": {
+        color: theme.palette.text.primary,
+      },
+    },
   },
+
+  span: {
+    color: theme.palette.secondary.main,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1rem",
+    },
+  },
+
   textContainer: {
     paddingTop: "15%",
     display: "flex",
