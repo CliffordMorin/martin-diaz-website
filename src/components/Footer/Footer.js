@@ -74,7 +74,7 @@ const Footer = () => {
               <Typography variant="h9" sx={{ fontSize: "10px" }}>
                 Made with <Favorite fontSize="10px" color="error" /> by{" "}
                 <a
-                  href="https://www.cliffordmorinmusic.com/"
+                  href="https://cliffordmorin.dev"
                   target="_blank"
                   rel="noreferrer"
                   className={classes.link}

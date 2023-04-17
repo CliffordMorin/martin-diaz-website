@@ -8,6 +8,8 @@ import {
   Alert,
   IconButton,
   Slide,
+  Button,
+  Link,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import useTheme from "@mui/material/styles/useTheme";
@@ -138,18 +140,25 @@ const Home = () => {
         />
 
         <Fade delay="100">
-          <Typography variant="h6" sx={{ marginBottom: "20px" }}>
-            New Album{" "}
-            <a
-              href="https://open.spotify.com/album/4lqu02Opk6iEkJlSQlRSgh?si=z-dtIJeIT7mY2fuv5OrXaQ"
-              className={classes.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              "IDENTITIES"
-            </a>{" "}
-            Available Now
-          </Typography>
+          <Link
+            href="https://open.spotify.com/album/4lqu02Opk6iEkJlSQlRSgh?si=z-dtIJeIT7mY2fuv5OrXaQ"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button className={classes.button}>
+              <Typography variant={isSmallScreen ? "h6" : "h5"}>
+                New Album{" "}
+                <Typography
+                  variant={isSmallScreen ? "h6" : "h5"}
+                  className={classes.span}
+                >
+                  {" "}
+                  "IDENTITIES"{" "}
+                </Typography>{" "}
+                Available Now
+              </Typography>
+            </Button>
+          </Link>{" "}
         </Fade>
       </Container>
     </Container>
