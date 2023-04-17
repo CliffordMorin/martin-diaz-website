@@ -14,6 +14,7 @@ import { SiBandsintown } from "react-icons/si";
 import EventCard from "./EventCard";
 import EmptyCalendar from "./EmptyCalendar";
 import LoadingPage from "./LoadingPage";
+import ErrorPage from "./ErrorPage";
 
 const API_KEY = process.env.REACT_APP_BANDSINTOWN_API_KEY;
 const ARTIST_ID = "12667113";
@@ -81,6 +82,8 @@ const CalendarV2 = () => {
                 <EventCard event={event} />
               </Grid>
             ))
+          ) : error ? (
+            <ErrorPage error={error} />
           ) : (
             <EmptyCalendar />
           )}
