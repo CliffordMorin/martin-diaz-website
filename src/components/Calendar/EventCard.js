@@ -1,7 +1,7 @@
 import { Box, Typography, Button, Link } from "@mui/material";
 
 const EventCard = ({ event }) => {
-  const { venue, title, datetime, url } = event;
+  const { venue, datetime, url, description } = event;
   const date = new Date(datetime).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
@@ -83,7 +83,7 @@ const EventCard = ({ event }) => {
             },
           }}
         >
-          {title}
+          {description}
         </Typography>
         <Link href={url} target="_blank" rel="noreferrer">
           <Button variant="contained" color="secondary" size="medium">
