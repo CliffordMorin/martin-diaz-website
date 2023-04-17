@@ -35,6 +35,7 @@ const CalendarV2 = () => {
       const data = await response.json();
       setEvents(data);
     } catch (error) {
+      console.log(error);
       setError(error);
     } finally {
       setLoading(false);
