@@ -6,6 +6,7 @@ const colorPalette = {
   timberWolf: "#d8cdcfff",
   cafeNoir2: "#49301dff",
   buff: "#dea284ff",
+  buffLight: "#f7e6daff",
 };
 
 let fonts = {
@@ -28,6 +29,7 @@ let theme = createTheme({
     },
     secondary: {
       main: colorPalette.buff,
+      light: colorPalette.buffLight,
     },
     background: {
       paper: colorPalette.licorice,
