@@ -19,7 +19,7 @@
 
 ## Description
 
-This application is a functional professional musician website I built for a client. Some of the technologies I used are React, JS, and mainly Material-UI. The goal of this website was to build it from scratch using Material-UI to really understand how to use it effectively.
+I created a fully-functional professional musician website for a client, incorporating various cutting-edge technologies such as React, JS, and MUI. To add a dynamic edge to the website, I integrated the Bands in Town API to enable the client to easily manage upcoming shows by adding or modifying events directly from their Bands in Town artist account. This eliminates the need for me to manually code events into the website, ensuring that the site stays up-to-date with the latest events.
 
 ## User Story
 
