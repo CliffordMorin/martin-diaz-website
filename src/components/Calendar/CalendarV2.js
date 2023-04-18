@@ -19,7 +19,7 @@ import ErrorPage from "./ErrorPage";
 const API_KEY = process.env.REACT_APP_BANDSINTOWN_API_KEY;
 const ARTIST_ID = "12667113";
 
-const API_URL = `https://rest.bandsintown.com/artists/martin%20diaz/events?app_id=${API_KEY}&date=upcoming`;
+const API_URL = `https://rest.bandsintown.com/v3.1/artists/martin%20diaz/events?app_id=${API_KEY}&date=upcoming`;
 
 const CalendarV2 = () => {
   const theme = useTheme();
@@ -33,6 +33,7 @@ const CalendarV2 = () => {
       setLoading(true);
       const response = await fetch(API_URL);
       const data = await response.json();
+      console.log(data);
       setEvents(data);
     } catch (error) {
       console.log(error);
