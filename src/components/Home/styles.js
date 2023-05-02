@@ -23,13 +23,13 @@ export default makeStyles((theme) => ({
   avatar: {
     width: 180,
     height: 180,
+    transition: "all 0.3s ease-in-out",
     "&:hover": {
       transform: "scale(1.1)",
-      transition: "all 0.3s ease-in-out",
     },
     [theme.breakpoints.down("sm")]: {
-      width: 100,
-      height: 100,
+      width: 120,
+      height: 120,
     },
   },
   textContainer: {
