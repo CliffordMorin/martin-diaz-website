@@ -8,10 +8,12 @@ import {
   Alert,
   IconButton,
   Slide,
+  Avatar,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import useTheme from "@mui/material/styles/useTheme";
 import { Fade } from "react-awesome-reveal";
+import DamJawnCover from "/Users/cliffordmorin/projects/Martin-Diaz-Website/src/images/compressed/Album-pics/damjawncover.jpg";
 import makeStyles from "./styles";
 import { Helmet } from "react-helmet-async";
 
@@ -74,7 +76,7 @@ const Home = () => {
             </>
           }
         >
-          New album "The Dam Jawn" coming soon!{" "}
+          Presave New album "The Dam Jawn"{" "}
         </Alert>
       </Snackbar>
       <Container
@@ -141,15 +143,27 @@ const Home = () => {
           <Typography variant="h6" sx={{ marginBottom: "20px" }}>
             New Album{" "}
             <a
-              href="https://open.spotify.com/album/4lqu02Opk6iEkJlSQlRSgh?si=z-dtIJeIT7mY2fuv5OrXaQ"
+              href="https://music.apple.com/nl/album/master-street-feat-dick-oatts/1684467353?i=1684467557"
               className={classes.link}
               target="_blank"
               rel="noreferrer"
             >
-              "IDENTITIES"
+              "THE DAM JAWN"
             </a>{" "}
-            Available Now
+            Presave Now
           </Typography>
+          <a
+            href="https://music.apple.com/nl/album/master-street-feat-dick-oatts/1684467353?i=1684467557"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            <Avatar
+              src={DamJawnCover}
+              alt="album cover"
+              sx={{ width: 200, height: 200 }}
+            />
+          </a>
         </Fade>
       </Container>
     </Container>

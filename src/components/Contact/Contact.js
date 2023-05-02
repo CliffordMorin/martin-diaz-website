@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Container, Paper, useTheme, Divider } from "@mui/material";
 import { alpha } from "@mui/material/styles";
-import { Fade } from "react-awesome-reveal";
+import { Bounce } from "react-awesome-reveal";
 import makeStyles from "./styles";
 import ContactForm from "./ContactForm";
 import { Helmet } from "react-helmet-async";
@@ -21,11 +21,11 @@ const Contact = () => {
         <link rel="canonical" href="/contact" />
       </Helmet>
       <Container className={classes.container} maxWidth="xl">
-        <Fade>
+        <Bounce>
           <Typography variant="h2" align="center" className={classes.heading}>
             CONTACT
           </Typography>
-        </Fade>
+        </Bounce>
         <Divider
           sx={{
             zIndex: "100",
