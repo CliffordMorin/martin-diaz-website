@@ -13,7 +13,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import useTheme from "@mui/material/styles/useTheme";
 import { Fade } from "react-awesome-reveal";
-import DamJawnCover from "/Users/cliffordmorin/projects/Martin-Diaz-Website/src/images/compressed/Album-pics/damjawncover.jpg";
+import DamJawnCover from "../../images/compressed/Album-pics/damjawncover.jpg";
 import makeStyles from "./styles";
 import { Helmet } from "react-helmet-async";
 
