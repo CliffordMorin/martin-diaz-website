@@ -62,7 +62,7 @@ const Nav = () => {
               noWrap
               component="div"
               sx={{
-                ml: 6,
+                ml: 4,
                 display: { xs: "flex", md: "none" },
               }}
             >

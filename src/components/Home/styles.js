@@ -44,7 +44,7 @@ export default makeStyles((theme) => ({
       paddingTop: "10%",
       display: "block",
       textAlign: "left",
-      width: "40%",
+      width: "50%",
       "& span": {
         fontSize: "3rem",
       },
