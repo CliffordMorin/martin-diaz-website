@@ -161,7 +161,7 @@ const Home = () => {
             <Avatar
               src={DamJawnCover}
               alt="album cover"
-              sx={{ width: 200, height: 200 }}
+              className={classes.avatar}
             />
           </a>
         </Fade>

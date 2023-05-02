@@ -20,6 +20,18 @@ export default makeStyles((theme) => ({
       color: theme.palette.secondary.light,
     },
   },
+  avatar: {
+    width: 180,
+    height: 180,
+    "&:hover": {
+      transform: "scale(1.1)",
+      transition: "all 0.3s ease-in-out",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: 100,
+      height: 100,
+    },
+  },
   textContainer: {
     paddingTop: "15%",
     display: "flex",
