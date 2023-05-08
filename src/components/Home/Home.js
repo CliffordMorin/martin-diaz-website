@@ -142,20 +142,16 @@ const Home = () => {
         <Fade delay="100">
           <Typography variant="h6" sx={{ marginBottom: "20px" }}>
             <a
-              href="https://music.apple.com/nl/album/master-street-feat-dick-oatts/1684467353?i=1684467557"
+              href="https://orcd.co/avvade9"
               className={classes.link}
               target="_blank"
               rel="noreferrer"
             >
-              "THE DAM JAWN"
+              "MASTER STREET" by The Dam Jawn ft Dick Oatts
             </a>{" "}
-            Presave Now
+            Out Now! Click to listen!
           </Typography>
-          <a
-            href="https://music.apple.com/nl/album/master-street-feat-dick-oatts/1684467353?i=1684467557"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://orcd.co/avvade9" target="_blank" rel="noreferrer">
             {" "}
             <Avatar
               src={DamJawnCover}
