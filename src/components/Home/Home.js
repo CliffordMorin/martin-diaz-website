@@ -76,7 +76,7 @@ const Home = () => {
             </>
           }
         >
-          Presave New album "The Dam Jawn"{" "}
+          New album "Master St" out now!{" "}
         </Alert>
       </Snackbar>
       <Container
