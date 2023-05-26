@@ -102,6 +102,17 @@ const Discography = () => {
             </Grid>
             <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
               <iframe
+                title="Master st"
+                style={{ borderRadius: "10px", margin: "0px 10px" }}
+                src="https://open.spotify.com/embed/album/3kxUnjjRa5Jjr0G4C06Pqp?utm_source=generator"
+                width="95%"
+                height="152"
+                frameBorder="0"
+                allowFullScreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+              <iframe
                 title="Supersax Project (Legacy)"
                 style={{ borderRadius: "10px", margin: "0px 10px" }}
                 src="https://open.spotify.com/embed/album/46JjB291phd2CrtWKSnEIy?utm_source=generator"

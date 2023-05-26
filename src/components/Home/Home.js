@@ -147,7 +147,7 @@ const Home = () => {
               target="_blank"
               rel="noreferrer"
             >
-              "MASTER STREET" by The Dam Jawn ft Dick Oatts
+              "MASTER ST" by The Dam Jawn ft Dick Oatts
             </a>{" "}
             Out Now! Click to listen!
           </Typography>
